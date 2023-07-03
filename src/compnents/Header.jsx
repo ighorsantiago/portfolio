@@ -1,4 +1,4 @@
-import styles from './Header.module.css';
+import { Button, Container } from './Header.styles';
 
 export function Header() {
 
@@ -7,10 +7,10 @@ export function Header() {
     }
 
     return (
-        <header className={styles.header}>
-            <button onClick={handleClick}>Home</button>
-            <button onClick={handleClick}>Contatos</button>
-            <button onClick={handleClick}>Projetos</button>
-        </header>
+        <Container>
+            <Button onClick={handleClick}>Home</Button>
+            <Button onClick={handleClick}>Contatos</Button>
+            <Button onClick={handleClick}>Projetos</Button>
+        </Container>
     );
 }
