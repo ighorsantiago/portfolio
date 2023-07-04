@@ -8,3 +8,7 @@ body {
     background-color: #282a36;
     color: #fff
 }
+
+body, input, text, textarea, button {
+    font-family: 'Fira Code';
+}
