@@ -6,14 +6,8 @@ export const Container = styled.header`
     justify-content: center;
 
     padding: 2rem 0;
-`;
 
-export const Nav = styled.nav`
-    flex-direction: row;
-`;
-
-export const Ul = styled.ul`
-    flex-direction: row;
+    border-width: 1px;
 `;
 
 export const Button = styled(Link)`

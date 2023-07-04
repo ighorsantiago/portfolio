@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { Container, Button, Nav, Ul } from './styles';
+import { Container, Button } from './styles';
 
 export function Header() {
 
