@@ -1,28 +1,43 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    flex: 1;
-    display: flex;
-    flex-direction: row;
+    width: 90%;
+    height: calc(100vh - 6rem);
 
-    padding: 0 20px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 768px) {
-        flex-direction: column;
-
-        /* background-color: red; */
-
-        text-align: center;
+        padding: 20px 0;
     }
 `;
 
-export const Content = styled.div`
-    width: 80%;
-    /* height: calc(100vh - 8rem); */
 
+export const Content = styled.div`
+    /* width: 100%;
+    height: calc(100vh - 8rem); */
+    
+    width: 80%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     border-radius: 20px;
 
-    margin-left: 1.5rem;
-
+    padding: 15px;
+    
     background-color: #44475a;
+
+    @media (max-width: 768px) {
+        width: 100%;
+
+        margin-top: 20%;
+    }
+`;
+
+export const Text = styled.text`
+    font-size: 20px;
 `;

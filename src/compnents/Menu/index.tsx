@@ -67,7 +67,7 @@ export function Menu() {
 
                 {
                     links.map(link => (
-                        <MenuBtn to={link.href}>
+                        <MenuBtn to={link.href} onClick={() => { setActive(!active) }}>
                             { link.page }
                         </MenuBtn>
                     ))

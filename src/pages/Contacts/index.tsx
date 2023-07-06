@@ -1,10 +1,13 @@
-import { Container, Text } from './styles';
+import { InfoCard } from '../../compnents/InfoCard';
+import { Container, Content, Text } from './styles';
 
 export function Contacts() {
 
     return (
         <Container>
-            <Text>CONTATOS</Text>
+            <Content>
+                <InfoCard></InfoCard>
+            </Content>
         </Container>
     );
 }

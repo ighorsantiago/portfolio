@@ -18,6 +18,8 @@ export const LeftBox = styled.nav`
 
     padding: 30px 5px;
 
+    margin-right: 30px;
+
     background-color: #44475a;
 
     @media (max-width: 768px) {
@@ -27,6 +29,8 @@ export const LeftBox = styled.nav`
         justify-content: space-around;
 
         padding: 10px 5px;
+
+        margin-right: 0;
     }
 `;
 
