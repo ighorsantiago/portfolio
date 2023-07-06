@@ -32,15 +32,21 @@ export function Menu() {
 
     const [active, setActive] = useState(false);
 
+    const links = [
+        { page: "Sobre", href: "/portfolio" },
+        { page: "Projetos", href: "/portfolio/projetos" },
+        { page: "Contatos", href: "/portfolio/contatos" },
+    ];
+
     return (
         <LeftBox>
-            <PersonalInfoBox>
-
-                <Avatar>
-                    <AvatarImg src={avatarImg} />
-                </Avatar>
+            <Avatar>
+                <AvatarImg src={avatarImg} />
+            </Avatar>
+            <PersonalInfoBox active={active}>
                 <Name>Ighor Santiago</Name>
 
+                {/* <JobBox active={active}> */}
                 <JobBox>
                     <JobText>Desenvolvedor Mobile</JobText>
                 </JobBox>
@@ -49,7 +55,7 @@ export function Menu() {
             <Divider />
 
             <MenuList active={active}>
-                <MenuBtn to="">
+                {/* <MenuBtn to="">
                     Sobre
                 </MenuBtn>
                 <MenuBtn to="/portfolio/contatos">
@@ -57,25 +63,34 @@ export function Menu() {
                 </MenuBtn>
                 <MenuBtn to="">
                     Contatos
-                </MenuBtn>
-            <FooterLeft>
-                <FooterText>Mais informações?</FooterText>
+                </MenuBtn> */}
 
-                <FooterLeftIcons>
-                    <SocialLinks
-                        to="https://www.linkedin.com/in/ighor-santiago/"
-                        target="blank"
-                    >
-                        <LinkedinLogo size={40} color="black" />
-                    </SocialLinks>
-                    <SocialLinks
-                        to="https://github.com/ighorsantiago"
-                        target="blank"
-                    >
-                        <GithubLogo size={40} color="black" />
-                    </SocialLinks>
-                </FooterLeftIcons>
-            </FooterLeft>
+                {
+                    links.map(link => (
+                        <MenuBtn to={link.href}>
+                            { link.page }
+                        </MenuBtn>
+                    ))
+                }
+
+                <FooterLeft>
+                    <FooterText>Mais informações?</FooterText>
+
+                    <FooterLeftIcons>
+                        <SocialLinks
+                            to="https://www.linkedin.com/in/ighor-santiago/"
+                            target="blank"
+                        >
+                            <LinkedinLogo size={40} color="black" />
+                        </SocialLinks>
+                        <SocialLinks
+                            to="https://github.com/ighorsantiago"
+                            target="blank"
+                        >
+                            <GithubLogo size={40} color="black" />
+                        </SocialLinks>
+                    </FooterLeftIcons>
+                </FooterLeft>
             </MenuList>
 
 

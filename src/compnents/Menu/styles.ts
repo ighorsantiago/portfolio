@@ -8,7 +8,6 @@ interface Props {
 export const LeftBox = styled.nav`
     width: 20%;
     min-width: 160px;
-    /* height: calc(100vh - 15rem); */
 
     display: flex;
     flex-direction: column;
@@ -25,8 +24,9 @@ export const LeftBox = styled.nav`
         width: 90%;
         
         flex-direction: row;
-
         justify-content: space-around;
+
+        padding: 10px 5px;
     }
 `;
 
@@ -50,7 +50,7 @@ export const Avatar = styled.div`
         width: 70px;
         height: 70px;
 
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
 `;
 
@@ -68,14 +68,15 @@ export const AvatarImg = styled.img`
     }
 `;
 
-export const PersonalInfoBox = styled.div`
+export const PersonalInfoBox = styled.div<Props>`
     display: flex;
     flex-direction: column;
 
     justify-content: center;
     align-items: center;
+    
     @media (max-width: 768px) {
-        display: flex;
+        display: ${(props) => (props.active ? "none" : "block")};
         flex-direction: column;
 
         justify-content: center;
@@ -129,34 +130,25 @@ export const Divider = styled.div`
     border: 0.5px solid white;
 
     @media (max-width: 768px) {
-        width: 0;
-        border: 0px solid white;
+        display: none;
     }
 `;
 
 export const MenuList = styled.div<Props>`
-    /* @media (max-width: 768px) {
-        display: ${(props) => (props.active ? "block" : "none")};
-        flex-direction: column;
-        position: absolut;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        gap: 2rem;
-        height: ${(props) => props.active ? "100vh" : 0}
-        overflow: hidden;
-    } */
+
+    margin: 30px 0;
+
     @media (max-width: 768px) {
-        display: ${(props) => (props.active ? "block" : "none")};
+        display: ${(props) => (props.active ? "flex" : "none")};
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        margin: 0;
 
         /* background-color: red; */
 
         text-align: center;
-        padding: 2rem 0;
     }
 `;
 
@@ -190,7 +182,7 @@ export const MenuBtn = styled(NavLink)`
 
     @media (max-width: 768px) {
         display: block;
-        margin: 2rem auto;
+        margin: 0 0.5rem;
     }
 `;
 
@@ -211,59 +203,15 @@ export const Icon = styled.button`
     }
 `;
 
-// export const MenuList = styled.div`
-//     display: flex;
-//     flex-direction: column;
-
-//     justify-content: space-around;
-//     align-items: center;
-
-//     margin-top: 10px;
-
-//     @media (max-width: 768px) {
-
-//     }
-// `;
-
-// // export const MenuBtn = styled(Link)`
-// export const MenuBtn = styled(NavLink)`
-//     width: 50px;
-//     height: 50px;
-
-//     display: flex;
-
-//     justify-content: space-around;
-//     align-items: center;
-
-//     border-radius: 8px;
-
-//     text-decoration: none;
-
-//     color: white;
-
-//     /* HOVER AND TRANSITION */
-//     transition: 3s ease-in-out;
-
-//     &:hover {
-//         color: green;
-//     }
-
-//     /* background-color: #6272a4; */
-
-//     @media (max-width: 768px) {
-
-//     }
-// `;
-
-// export const MenuBtnText = styled.text`
-//     /* color: white; */
-// `;
-
 export const FooterLeft = styled.div`
     display: flex;
     flex-direction: column;
 
-    margin-top: 20px;
+    margin-top: 50px;
+
+    @media (max-width: 768px){
+        display: none;
+    }
 `;
 
 export const FooterText = styled.text`
@@ -295,8 +243,6 @@ export const SocialLinks = styled(Link)`
     align-items: center;
 
     border-radius: 8px;
-
-    /* background-color: #6272a4; */
 `;
 
 export const SocialImg = styled.img`

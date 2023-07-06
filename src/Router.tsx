@@ -9,8 +9,8 @@ export function Router() {
 
     return (
         <Routes>
-            <Route path="/portfolio/" Component={DefaultLayout}>
-                <Route path="/portfolio/" Component={Home} />
+            <Route path="/portfolio" Component={DefaultLayout}>
+                <Route path="/portfolio" Component={Home} />
                 <Route path="/portfolio/contatos" Component={Contacts} />
                 <Route path="/portfolio/projetos" Component={Projects} />
             </Route>
