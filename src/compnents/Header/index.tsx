@@ -16,12 +16,13 @@ export function Header() {
             </Logo>
             <Nav bar={bar}>
                 <span><a href="/portfolio">Home</a></span>
-                <span><a href="/portfolio/projetos">Projects</a></span>
+                <span><a href="/portfolio/projetos">Projetos</a></span>
                 <span><a href="/portfolio/contatos">Contatos</a></span>
             </Nav>
             <div
                 onClick={() => setBar(!bar)}
-                className="bars">
+                className="bars"
+            >
                 <div className="bar"></div>
             </div>
         </Container>

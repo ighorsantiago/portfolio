@@ -1,11 +1,14 @@
 import {
     Container,
     ImageBox,
-    Image,
+    IphoneImage,
+    AppImage,
     Description,
     Title,
-    Text
+    Text,
 } from "./styles";
+
+import iPhone from '../../assets/iPhone.jpeg';
 
 type InfoProps = {
     image: string;
@@ -18,16 +21,17 @@ export function AppCard({ image, title, description }: InfoProps) {
     return (
 
         <Container>
-            <ImageBox>
-                <Image src={image} />
-            </ImageBox>
 
-            <Description>
-                <Title>{title}</Title>
-                <Text>
-                    {description}
-                </Text>
-            </Description>
+                <ImageBox>
+                    <IphoneImage src={iPhone} />
+                    <AppImage src={image} />
+                </ImageBox>
+
+                <Description>
+                    <Title>{title}</Title>
+                    <Text> {description} </Text>
+                </Description>
+
         </Container>
     );
 }
