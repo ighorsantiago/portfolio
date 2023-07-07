@@ -2,15 +2,16 @@ import { useState } from 'react'
 
 import { Container, Logo, Nav } from './styles';
 
+import reactLogo from '../../assets/react.svg';
+
 export function Header() {
 
-    const reactLogo = '../../assets/react.svg';
     const [bar, setBar] = useState(false);
 
     return (
         <Container bar={bar}>
             <Logo>
-                <img src={reactLogo} />
+                <img src={reactLogo} style={{ width: 30, height: 30, marginRight: 15 }} />
                 <h1>PORTFÓLIO</h1>
             </Logo>
             <Nav bar={bar}>
