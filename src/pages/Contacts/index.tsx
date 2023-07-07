@@ -6,7 +6,7 @@ export function Contacts() {
     return (
         <Container>
             <Content>
-                <InfoCard></InfoCard>
+                <InfoCard />
             </Content>
         </Container>
     );

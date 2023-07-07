@@ -1,18 +1,28 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
 
-import { Container, Button } from './styles';
+import { Container, Logo, Nav } from './styles';
 
 export function Header() {
 
-    function handleClick() {
-        alert("Clicou!")
-    }
+    const reactLogo = '../../assets/react.svg';
+    const [bar, setBar] = useState(false);
 
     return (
-        <Container>
-            <Button to={"/portfolio/"}>Home</Button>
-            <Button to={"/portfolio/contatos"}>Contatos</Button>
-            <Button to={"/portfolio/projetos"}>Projetos</Button>
+        <Container bar={bar}>
+            <Logo>
+                <img src={reactLogo} />
+                <h1>PORTFÓLIO</h1>
+            </Logo>
+            <Nav bar={bar}>
+                <span><a href="/portfolio">Home</a></span>
+                <span><a href="/portfolio/projetos">Projects</a></span>
+                <span><a href="/portfolio/contatos">Contatos</a></span>
+            </Nav>
+            <div
+                onClick={() => setBar(!bar)}
+                className="bars">
+                <div className="bar"></div>
+            </div>
         </Container>
-    );
+    )
 }
