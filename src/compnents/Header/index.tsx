@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Container, Logo, Nav } from './styles';
 
 import reactLogo from '../../assets/react.svg';
+import { Link } from 'react-router-dom';
 
 export function Header() {
 
@@ -15,9 +16,9 @@ export function Header() {
                 <h1>PORTFÓLIO</h1>
             </Logo>
             <Nav bar={bar}>
-                <span><a href="/portfolio">Home</a></span>
-                <span><a href="/portfolio/projetos">Projetos</a></span>
-                <span><a href="/portfolio/contatos">Contatos</a></span>
+                <span><Link to="/portfolio">Home</Link></span>
+                <span><Link to="/portfolio/projetos">Projetos</Link></span>
+                <span><Link to="/portfolio/contatos">Contatos</Link></span>
             </Nav>
             <div
                 onClick={() => setBar(!bar)}
