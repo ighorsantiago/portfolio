@@ -61,6 +61,11 @@ export const Description = styled.div`
     margin: 0 50px;
 
     padding: 0 10px;
+
+    @media (max-width: 768px) {
+        margin: 0 30px;
+        padding: 0;
+    }
 `;
 
 export const Title = styled.text`
@@ -75,4 +80,8 @@ export const Text = styled.text`
     font-size: 11px;
     text-align: justify;
     color: #000;
+
+    @media (max-width: 768px) {
+        text-align: left;
+    }
 `;

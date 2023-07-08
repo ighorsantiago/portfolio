@@ -33,7 +33,7 @@ export const TextBox = styled.div`
     display: flex;
     flex-direction: column;
 
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
     /* background-color: red; */
@@ -48,7 +48,7 @@ export const Title = styled.text`
 
     text-align: center;
 
-    /* margin-bottom: 50px; */
+    margin-bottom: 30px;
 
     color: #000;
 

@@ -25,7 +25,7 @@ export function Home() {
                 <TextBox>
                     <Title>Portfólio <br/> Ighor Santiago</Title>
                     <Text>Desenvolvedor mobile</Text>
-                    <Button>Entre em contato</Button>
+                    {/* <Button>Entre em contato</Button> */}
                 </TextBox>
             </Content>
             <ImageBox>

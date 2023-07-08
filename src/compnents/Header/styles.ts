@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 interface Props {
     extendNavBar: boolean;
@@ -48,9 +48,9 @@ export const NavbarLinkContainer = styled.div`
 
 export const NavbarLink = styled(Link)`
     color: white;
-    font-size: x-large;
+    font-size: large;
     text-decoration: none;
-    margin: 10px;
+    margin: 10px 15px;
 
     @media (max-width: 700px) {
         display: none;
@@ -94,7 +94,7 @@ export const NavbarExtendedContainer = styled.div`
     }
 `;
 
-export const NavbarLinkExtended = styled(Link)`
+export const NavbarLinkExtended = styled(NavLink)`
     font-size: x-large;
     
     text-decoration: none;

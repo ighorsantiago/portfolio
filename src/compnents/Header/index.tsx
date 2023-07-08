@@ -31,9 +31,9 @@ export function Header() {
                 <RightContainer>
                     <NavbarLinkContainer>
 
-                        <NavbarLink to="/portfolio/">Home</NavbarLink>
-                        <NavbarLink to="/portfolio/projetos">Projetos</NavbarLink>
-                        <NavbarLink to="/portfolio/contatos">Contatos</NavbarLink>
+                        <NavbarLink to="/portfolio/">HOME</NavbarLink>
+                        <NavbarLink to="/portfolio/projetos">APLICATIVOS</NavbarLink>
+                        <NavbarLink to="/portfolio/contatos">CONTATOS</NavbarLink>
 
                         <OpenLinksButton
                             extendNavBar={extendNavbar}
@@ -48,9 +48,9 @@ export function Header() {
             </NavbarInnerContainer>
             {extendNavbar && (
                 <NavbarExtendedContainer>
-                    <NavbarLinkExtended to="/portfolio/">Home</NavbarLinkExtended>
-                    <NavbarLinkExtended to="/portfolio/projetos">Projetos</NavbarLinkExtended>
-                    <NavbarLinkExtended to="/portfolio/contatos">Contatos</NavbarLinkExtended>
+                    <NavbarLinkExtended to="/portfolio/" onClick={() => { setExtendNavbar(false) }}>HOME</NavbarLinkExtended>
+                    <NavbarLinkExtended to="/portfolio/projetos" onClick={() => { setExtendNavbar(false) }}>APLICATIVOS</NavbarLinkExtended>
+                    <NavbarLinkExtended to="/portfolio/contatos" onClick={() => { setExtendNavbar(false) }}>CONTATOS</NavbarLinkExtended>
                 </NavbarExtendedContainer>
             )}
         </NavbarContainer>

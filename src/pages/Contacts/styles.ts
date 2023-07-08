@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 90%;
+    width: 100%;
     height: calc(100vh - 6rem);
 
     display: flex;
@@ -29,7 +29,7 @@ export const Content = styled.div`
 
     border-radius: 20px;
 
-    background-color: #44475a;
+    /* background-color: #44475a; */
 
     @media (max-width: 768px) {
         height: calc(70vh - 8rem);

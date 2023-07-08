@@ -1,29 +1,24 @@
 import {
-    Box,
-    Card,
-    Icon,
-    InfoBox,
-    InfoTitle,
-    InfoText
+    Container,
+    IconImg,
 } from './styles';
 
-import {
-    Phone,
-    Envelope,
-    MapPinLine,
-    LinkedinLogo,
-    GithubLogo,
-    List,
-    X
-} from '@phosphor-icons/react';
+import whatsappIcon from '../../assets/whatsapp-icon.svg';
+import linkedinIcon from '../../assets/linkedin-icon.svg';
+import githubIcon from '../../assets/github-icon.svg';
+import emailIcon from '../../assets/email-icon.svg';
 
 export function InfoCard() {
 
     return (
-        <Box>
-            <Card>
+        <Container>
+            <IconImg src={whatsappIcon} />
+            <IconImg src={linkedinIcon} />
+            <IconImg src={githubIcon} />
+            <IconImg src={emailIcon} />
+            {/* <Card>
                 <Icon>
-                    <Phone size={25} />
+                    <IconImg src={whatsappIcon} />
                 </Icon>
                 <InfoBox>
                     <InfoTitle>Telefone</InfoTitle>
@@ -32,7 +27,7 @@ export function InfoCard() {
             </Card>
             <Card>
                 <Icon>
-                    <Envelope size={25} />
+                <IconImg src={linkedinIcon} />
                 </Icon>
                 <InfoBox>
                     <InfoTitle>E-mail</InfoTitle>
@@ -41,13 +36,13 @@ export function InfoCard() {
             </Card>
             <Card>
                 <Icon>
-                    <MapPinLine size={25} />
+                    <IconImg src={githubIcon} />
                 </Icon>
                 <InfoBox>
                     <InfoTitle>Endereço</InfoTitle>
                     <InfoText>Rua Caniú, 309 - Pechincha</InfoText>
                 </InfoBox>
-            </Card>
-        </Box>
+            </Card> */}
+        </Container>
     );
 }
