@@ -19,8 +19,11 @@ export const Content = styled.div`
     width: 50%;
     height: 50%;
 
+    /* background-color: red; */
+
     @media (max-width: 640px) {
-        margin-top: 30px;
+        width: 50%;
+        height: 30%;
     }
 `;
 
@@ -30,10 +33,14 @@ export const TextBox = styled.div`
     display: flex;
     flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     /* background-color: red; */
+
+    @media (max-width: 640px) {
+        justify-content: center;
+    }
 `;
 
 export const Title = styled.text`
@@ -54,6 +61,10 @@ export const Title = styled.text`
 export const Text = styled.text`
     font-size: 16px;
     color: #000;
+
+    @media (max-width: 640px) {
+        margin: 20px 0;
+    }
 `;
 
 export const Button = styled.button`
@@ -79,13 +90,21 @@ export const ImageBox = styled.div`
     /* background-color: red; */
 
     @media (max-width: 640px) {
+        width: 150px;
+        height: 150px;
         margin-top: 50px;
+        margin-bottom: 100px;
     }
 `;
 
 export const Image = styled.img`
     width: 400px;
     height: 400px;
+
+    @media (max-width: 640px) {
+        width: 150px;
+        height: 150px;
+    }
 `;
 
 // export const Container = styled.div`

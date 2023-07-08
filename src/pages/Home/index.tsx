@@ -30,7 +30,7 @@ export function Home() {
             </Content>
             <ImageBox>
                 <Image src={reactLogo} />
-                <Image src={icons} style={{ position: 'absolute', }} />
+                <Image src={icons} style={{ position: 'absolute' }} />
             </ImageBox>
         </Container>
     );
