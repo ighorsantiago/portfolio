@@ -32,6 +32,7 @@ export function Header() {
                     <NavbarLinkContainer>
 
                         <NavbarLink to="/portfolio/">HOME</NavbarLink>
+                        <NavbarLink to="/portfolio/sobre">SOBRE</NavbarLink>
                         <NavbarLink to="/portfolio/projetos">APLICATIVOS</NavbarLink>
                         <NavbarLink to="/portfolio/contatos">CONTATOS</NavbarLink>
 
@@ -49,6 +50,7 @@ export function Header() {
             {extendNavbar && (
                 <NavbarExtendedContainer>
                     <NavbarLinkExtended to="/portfolio/" onClick={() => { setExtendNavbar(false) }}>HOME</NavbarLinkExtended>
+                    <NavbarLinkExtended to="/portfolio/sobre" onClick={() => { setExtendNavbar(false) }}>SOBRE</NavbarLinkExtended>
                     <NavbarLinkExtended to="/portfolio/projetos" onClick={() => { setExtendNavbar(false) }}>APLICATIVOS</NavbarLinkExtended>
                     <NavbarLinkExtended to="/portfolio/contatos" onClick={() => { setExtendNavbar(false) }}>CONTATOS</NavbarLinkExtended>
                 </NavbarExtendedContainer>
