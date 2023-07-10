@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     width: 400px;
@@ -27,6 +28,10 @@ export const IconImg = styled.img`
         width: 70px;
         height: 70px;
     }
+`;
+
+export const LinkBtn = styled(Link)`
+    
 `;
 
 // export const Box = styled.div`

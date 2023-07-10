@@ -35,7 +35,6 @@ export function AppCard({ image, title, description, github }: InfoProps) {
                     <GithubLink
                         to={github.startsWith('https') ? github : 'https://www.google.com.br'}
                         target="blank"
-                        
                     >
                         {github}
                     </GithubLink>
