@@ -17,6 +17,7 @@ export function Projects() {
                                     image={project.image}
                                     title={project.title}
                                     description={project.description}
+                                    github={project.github}
                                 />
                             </Line>
                         )

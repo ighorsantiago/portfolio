@@ -2,10 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-
-    @media (max-width: 768px) {
-        max-width: 400px;
-    }
 `;
 
 // export const Container = styled.div`

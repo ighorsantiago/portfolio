@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -80,6 +81,20 @@ export const Text = styled.text`
     font-size: 11px;
     text-align: justify;
     color: #000;
+
+    @media (max-width: 768px) {
+        text-align: left;
+    }
+`;
+
+export const GithubLink = styled(Link)`
+    font-size: 11px;
+    text-align: justify;
+    text-decoration: underline;
+
+    margin-top: 30px;
+
+    color: blue;
 
     @media (max-width: 768px) {
         text-align: left;

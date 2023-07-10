@@ -10,18 +10,44 @@ export const Container = styled.div`
     align-items: center;
 
     @media (max-width: 768px) {
-        padding: 20px 0;
+
     }
 `;
 
 export const Content = styled.div`
     width: 60%;
-    height: 30%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 120px;
 
     text-align: justify;
+
+    @media (max-width: 768px) {
+        width: 90%;
+        margin-top: 300px;
+
+        text-align: left;
+    }
+`;
+
+export const Image = styled.img`
+    width: 300px;
+    height: 300px;
+
+    margin: 50px 0;
 `;
 
 export const Text = styled.text`
     font-size: 18px;
     color: #000;
+
+    @media (max-width: 768px) {
+        font-size: 16px
+    }
 `;
