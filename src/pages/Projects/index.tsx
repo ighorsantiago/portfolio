@@ -9,7 +9,7 @@ export function Projects() {
 
     return (
         <Container>
-            <Content>
+            {/* <Content> */}
                 <Table>
                     {
                         projects.length > 0 &&
@@ -26,7 +26,7 @@ export function Projects() {
                         )
                     }
                 </Table>
-            </Content>
+            {/* </Content> */}
         </Container>
     );
 }

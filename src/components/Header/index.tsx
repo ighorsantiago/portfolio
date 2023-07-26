@@ -24,7 +24,7 @@ export function Header() {
     return (
         <NavbarContainer navBar={navbar}>
             <NavbarInnerContainer>
-            <LeftContainer>
+                <LeftContainer>
                     <Logo src={navbar ? LogoBlack : LogoWhite} />
                     <Text navBar={navbar}>PORTFÓLIO</Text>
                 </LeftContainer>
@@ -47,7 +47,7 @@ export function Header() {
                     </NavbarLinkContainer>
                 </RightContainer>
             </NavbarInnerContainer>
-            {!navbar && (
+            {navbar && (
                 <NavbarExtendedContainer>
                     <NavbarLinkExtended to="/portfolio/" onClick={() => { setNavbar(false) }}>HOME</NavbarLinkExtended>
                     <NavbarLinkExtended to="/portfolio/sobre" onClick={() => { setNavbar(false) }}>SOBRE</NavbarLinkExtended>

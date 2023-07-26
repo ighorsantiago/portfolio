@@ -24,9 +24,9 @@ export const Text = styled.text`
 
 
 export const Content = styled.div`
-    display: flex;
+    // display: flex;
 
-    border-radius: 20px;
+    // border-radius: 20px;
 
     /* background-color: #44475a; */
 
@@ -36,19 +36,29 @@ export const Content = styled.div`
 `;
 
 export const Table = styled.ul`
-    width: 100%;
+    /* width: 100%; */
 
     display: flex;
     flex-wrap: wrap;
 
     justify-content: center;
     align-items: center;
+    
+    /* background-color: #44475a; */
+
+    @media (max-width: 768px) {
+        display: block;
+        flex-wrap: none;
+    }
 `;
 
 export const Line = styled.li`
     width: 50%;
     decoration: none;
-    
+    list-style-type: none;
+
+    align-self: center;
+
     @media (max-width: 768px) {
         width: 100%;
 

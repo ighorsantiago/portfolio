@@ -8,10 +8,14 @@ type Props = {
 export const NavbarContainer = styled.nav<Props>`
     width: 100%;
     height: ${(props) => (props.navBar ? "100vh" : "80px")};
-    background-color: black;
+    
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 5%;
+
     opacity: ${(props) => (props.navBar ? 0.9 : 1)};
+
     background-color: ${(props) => (props.navBar ? 'white' : 'black')};
 
     @media (min-width: 700px) {
