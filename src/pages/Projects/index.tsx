@@ -1,9 +1,11 @@
-import { AppCard } from '../../compnents/AppCard';
+import { AppCard } from '../../components/AppCard';
 import { Container, Content, Line, Table, Text } from './styles';
 
 import { projects } from '../../utils/projects';
 
 export function Projects() {
+
+    function handleOpenProject(title: string) { }
 
     return (
         <Container>
@@ -12,27 +14,18 @@ export function Projects() {
                     {
                         projects.length > 0 &&
                         projects.map(project =>
-                            <Line>
+                            <Line key={project.title}>
                                 <AppCard
                                     image={project.image}
                                     title={project.title}
                                     description={project.description}
                                     github={project.github}
+                                    onClick={() => handleOpenProject(project.title)}
                                 />
                             </Line>
                         )
                     }
                 </Table>
-                {/* <AppCard
-                    image={projects[0].image}
-                    title={projects[0].title}
-                    description={projects[0].description}
-                />
-                <AppCard
-                    image={projects[0].image}
-                    title={projects[0].title}
-                    description={projects[0].description}
-                /> */}
             </Content>
         </Container>
     );

@@ -1,4 +1,4 @@
-import { InfoCard } from '../../compnents/InfoCard';
+import { InfoCard } from '../../components/InfoCard';
 import { Container, Content } from './styles';
 
 export function Contacts() {

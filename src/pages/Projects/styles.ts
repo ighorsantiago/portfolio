@@ -24,12 +24,7 @@ export const Text = styled.text`
 
 
 export const Content = styled.div`
-    /* width: 100%;
-    height: calc(100vh - 8rem); */
-
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
 
     border-radius: 20px;
 
@@ -52,6 +47,7 @@ export const Table = styled.ul`
 
 export const Line = styled.li`
     width: 50%;
+    decoration: none;
     
     @media (max-width: 768px) {
         width: 100%;

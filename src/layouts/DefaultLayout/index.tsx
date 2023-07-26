@@ -2,8 +2,8 @@ import { Outlet } from "react-router-dom";
 
 import { Container } from "./styles";
 
-import { Menu } from "../../compnents/Menu";
-import { Header } from "../../compnents/Header";
+import { Menu } from "../../components/Menu";
+import { Header } from "../../components/Header";
 
 export function DefaultLayout() {
 
