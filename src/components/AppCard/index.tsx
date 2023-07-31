@@ -1,5 +1,6 @@
 import { ArrowUpRight } from '@phosphor-icons/react';
 import * as Dialog from '@radix-ui/react-dialog';
+import { useTranslation } from 'react-i18next';
 
 import {
     Container,
@@ -15,7 +16,6 @@ import {
 
 
 import iPhone from '../../assets/iPhone.jpeg';
-import { ProjectInfo } from '../../pages/ProjectInfo';
 
 type InfoProps = {
     image: string;
@@ -27,6 +27,8 @@ type InfoProps = {
 
 export function AppCard({ image, title, description, github, onClick }: InfoProps) {
 
+    const { t } = useTranslation();
+
     return (
 
         <Container>
@@ -37,7 +39,7 @@ export function AppCard({ image, title, description, github, onClick }: InfoProp
 
             <Description>
                 <Title>{title}</Title>
-                <Text> {description} </Text>
+                <Text> {t(description)} </Text>
                 {/* <InfoButton to={`/portfolio/projetos/${title}`}> */}
 
                 {/* <Dialog.Root>
@@ -56,7 +58,7 @@ export function AppCard({ image, title, description, github, onClick }: InfoProp
                         to={github.startsWith('https') ? github : 'https://www.google.com.br'}
                         target="blank"
                     >
-                        {title === 'Pet Control' ? 'Em construção...' : 'Ver repositório no Github'}
+                        {title === 'Pet Control' ? t("development") : t("repo")}
                     </GithubLink>
                 }
             </Description>

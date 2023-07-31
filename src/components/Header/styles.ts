@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
+import * as  Switch from '@radix-ui/react-switch';
 
 type Props = {
     navBar: boolean;
+}
+
+type SwitchProps = {
+    language: string;
 }
 
 export const NavbarContainer = styled.nav<Props>`
@@ -11,6 +16,8 @@ export const NavbarContainer = styled.nav<Props>`
     
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     margin-bottom: 5%;
 
@@ -20,7 +27,7 @@ export const NavbarContainer = styled.nav<Props>`
 
     @media (min-width: 700px) {
         height: 80px;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 `;
@@ -32,6 +39,80 @@ export const LeftContainer = styled.div`
     padding-left: 5%;
 `;
 
+export const SwitchContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+`;
+
+export const Flag = styled.img`
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: 768px) {
+        width: 12px;
+        height: 12px;
+    }
+`;
+
+export const SwitchText = styled.text`
+    font-size: 12px;
+    color: white;
+`;
+
+// export const SwitchRoot = styled(Switch.Root)<SwitchProps>`
+export const SwitchRoot = styled(Switch.Root)`
+    width: 42px;
+    height: 25px;
+    border-radius: 9999px;
+    position: relative;
+
+    margin: 0 10px;
+
+    box-shadow: 0 2px 10px black;
+    -webkit-tap-highlight-color: #000;
+    background-color: darkgray;
+
+    &:focus {
+       box-shadow: 0 0 0 2px black;
+    }
+
+    @media (max-width: 768px) {
+        width: 22px;
+        height: 15px;
+
+        position: none;
+    }
+`;
+
+export const SwitchThumb = styled(Switch.Thumb)<SwitchProps>`
+    width: 21px;
+    height: 21px;
+    
+    display: block;
+    align-self: center;
+    
+    border-radius: 9999px;
+
+    transition: transform 100ms;
+    transform: translateX(${(props) => (props.language === "en" ? 19 : 2)}px);
+    // transform: translateX(19px);
+    
+    will-change: transform;
+    box-shadow: 0 2px 2px black;
+    background-color: white;
+
+    @media (max-width: 768px) {
+        width: 11px;
+        height: 11px;
+
+        transform: translateX(${(props) => (props.language === "en" ? 9 : 1)}px);
+    }
+`;
+
+/* ${(props) => (props.checked ? translateX(19) : translateX(2))}px; */
 export const RightContainer = styled.div`
     flex: 30%;
     display: flex;

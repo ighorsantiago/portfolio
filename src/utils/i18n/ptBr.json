@@ -1,0 +1,33 @@
+{
+    "translation": {
+        "portfolioHeader": "PORTFÓLIO",
+        "about": "SOBRE",
+        "contacts": "CONTATOS",
+
+        "portfolio": "Portfólio",
+        "dev": "Desenvolvedor mobile",
+
+        "petControl": "Esse será meu primeiro app publicado nas lojas. O aplicativo está em fase final de desenvolvimento e em breve será publicado.",
+        "dailyDiet": "Aplicativo para te ajudar na sua dieta. Com ele você pode ter um controle do que comeu e se estava dentro ou fora da dieta.",
+        "goFinances": "Aplicativo para te ajudar nas finanças. Você insere as informações e o app te mostra tudo de uma forma simples e objetiva.",
+        "devRadar": "Esse app te ajuda a encontrar outros desenvolvedores perto de voê filtrando pela linguagem de programação que você precisa.",
+        "beTheHero": "Um aplicativo voltado para ONGs que ajudam animais sem lar. As ONGs inserem as informações através de um site e no aplicativo você consegue ver os casos e entrar em contato com as ONGs caso queira ajudar.",
+        "eColeta": "Esse aplicativo marca os pontos de coleta para descartes de alguns materiais, como pilhas, óleos e etc.",
+        "sudoku": "Um joguinho de Sudoku que eu fiz para treinar.",
+        "igniteTeams": "Nesse aplicativo você pode inserir suas turmas e separá-las por jogos e etc.",
+        "todo": "App simples de To-Do list. Você insere o que quer fazer e pode marcar o que já foi feito.",
+        "proffy": "Aplicativo para facilitar o encontro entre alunos e professores.",
+
+        "repo": "Ver no Github",
+        "development": "Em desenvolvimento...",
+
+        "about1": "Prazer, me chamo Ighor Santiago e sou um desenvolvedor mobile",
+        "about2": "Comecei no desenvolvimento com Java mas adotei o framework React Native com TypeScript desde o início de 2020.",
+        "about3": "Desde o início da faculdade venho trabalhando com análise de sistemas, primeiro na IBM e atualmente na Global Hitss",
+        "about4": "Venho desenvolvendo alguns aplicativos nos cursos que faço e tenho dois aplicativos que quero publicar nas lojas.",
+        "about5": "Sou bacharel em Sistemas de Informação e tenho certificação em desenvolvimento mobile pela Rocketseat",
+        "about6": "Além disso particei de diversas Semanas Ominstack e Next Level Week também da Rockeseat. Tenho certificado de Lógica de programação e ",
+        "about7": "Formação Java pela Caelum e estou começando fazer Alura, começando pelo curso de Testes em React Native",
+        "about8": "Estou sempre estudando, tenho espírito de equipe, boa comunicação, resiliência e organização."
+    }
+}

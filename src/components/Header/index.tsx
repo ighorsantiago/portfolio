@@ -1,8 +1,13 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import {
     NavbarContainer,
     LeftContainer,
+    SwitchContainer,
+    SwitchText,
+    SwitchRoot,
+    SwitchThumb,
     RightContainer,
     NavbarExtendedContainer,
     NavbarInnerContainer,
@@ -12,29 +17,62 @@ import {
     OpenLinksButton,
     NavbarLinkExtended,
     Text,
+    Flag,
 } from "./styles";
 
 import LogoWhite from "../../assets/react.svg";
 import LogoBlack from "../../assets/react-black.svg";
+import Brasil from "../../assets/brasil.svg";
+import USA from "../../assets/usa.svg";
+
+type Lgn = {
+    language: "pt" | "en";
+}
 
 export function Header() {
 
+    const { t, i18n } = useTranslation();
+
     const [navbar, setNavbar] = useState(false);
+    const [lng, setLng] = useState("pt");
+
+    function handleCheck() {
+        if(lng === "pt") {
+            setLng("en");
+            i18n.changeLanguage("en")
+        } else {
+            setLng("pt");
+            i18n.changeLanguage("pt")
+        }
+
+        console.log(lng);
+    }
 
     return (
         <NavbarContainer navBar={navbar}>
             <NavbarInnerContainer>
                 <LeftContainer>
                     <Logo src={navbar ? LogoBlack : LogoWhite} />
-                    <Text navBar={navbar}>PORTFÓLIO</Text>
+                    <Text navBar={navbar}>{t("portfolioHeader")}</Text>
                 </LeftContainer>
+
+                <SwitchContainer onClick={handleCheck}>
+                    {/* <SwitchText>Português</SwitchText> */}
+                    <Flag src={Brasil} />
+                    <SwitchRoot>
+                        <SwitchThumb language={lng} />
+                    </SwitchRoot>
+                    {/* <SwitchText>English</SwitchText> */}
+                    <Flag src={USA} />
+                </SwitchContainer>
+
                 <RightContainer>
                     <NavbarLinkContainer>
 
                         <NavbarLink to="/portfolio/">HOME</NavbarLink>
-                        <NavbarLink to="/portfolio/sobre">SOBRE</NavbarLink>
-                        <NavbarLink to="/portfolio/projetos">APLICATIVOS</NavbarLink>
-                        <NavbarLink to="/portfolio/contatos">CONTATOS</NavbarLink>
+                        <NavbarLink to="/portfolio/sobre">{t("about")}</NavbarLink>
+                        <NavbarLink to="/portfolio/projetos">APPS</NavbarLink>
+                        <NavbarLink to="/portfolio/contatos">{t("contacts")}</NavbarLink>
 
                         <OpenLinksButton
                             navBar={navbar}
@@ -50,9 +88,9 @@ export function Header() {
             {navbar && (
                 <NavbarExtendedContainer>
                     <NavbarLinkExtended to="/portfolio/" onClick={() => { setNavbar(false) }}>HOME</NavbarLinkExtended>
-                    <NavbarLinkExtended to="/portfolio/sobre" onClick={() => { setNavbar(false) }}>SOBRE</NavbarLinkExtended>
-                    <NavbarLinkExtended to="/portfolio/projetos" onClick={() => { setNavbar(false) }}>APLICATIVOS</NavbarLinkExtended>
-                    <NavbarLinkExtended to="/portfolio/contatos" onClick={() => { setNavbar(false) }}>CONTATOS</NavbarLinkExtended>
+                    <NavbarLinkExtended to="/portfolio/sobre" onClick={() => { setNavbar(false) }}>{t("about")}</NavbarLinkExtended>
+                    <NavbarLinkExtended to="/portfolio/projetos" onClick={() => { setNavbar(false) }}>APPS</NavbarLinkExtended>
+                    <NavbarLinkExtended to="/portfolio/contatos" onClick={() => { setNavbar(false) }}>{t("contacts")}</NavbarLinkExtended>
                 </NavbarExtendedContainer>
             )}
         </NavbarContainer>

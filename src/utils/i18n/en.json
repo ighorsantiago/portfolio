@@ -1,0 +1,33 @@
+{
+    "translation": {
+        "portfolioHeader": "PORTFOLIO",
+        "about": "ABOUT",
+        "contacts": "CONTACTS",
+
+        "portfolio": "Portfolio",
+        "dev": "Mobile developer",
+
+        "petControl": "This will be my first app to be published. The application is in the final stages of development.",
+        "dailyDiet": "Application to help you with your diet. With this app you can have a control of what you ate and if it were on or off the diet.",
+        "goFinances": "Application to help you with finances. You enter the informations and the app shows you everything in a simple and objective way.",
+        "devRadar": "This app helps you find other developers near you by filtering for the programming language you need.",
+        "beTheHero": "An application aimed at NGOs that help homeless animals. The NGOs enter the information through a website and in the application you can see the cases and get in touch with the NGOs if you want to help.",
+        "eColeta": "This application marks the collection points for discarding some materials, such as batteries, oils, etc.",
+        "sudoku": "A little Sudoku game I made to practice.",
+        "igniteTeams": "In this application you can enter your classes and separate them by games and etc.",
+        "todo": "Simple To-Do list app. You enter what you want to do and you can mark what has already been done.",
+        "proffy": "Application to make easier the meeting between students and teachers.",
+
+        "repo": "Seen on Github",
+        "development": "Under development...",
+
+        "about1": "Hi, my name is Ighor Santiago and I'm a mobile developer",
+        "about2": "I started developing with Java but adopted the React Native framework with TypeScript since the beginning of 2020.",
+        "about3": "Since the beginning of college I've been working with systems analysis, first at IBM and currently at Global Hitss.",
+        "about4": "I've been developing some apps in the courses I take and I have two apps that I want to publish in stores. ",
+        "about5": "I have a bachelor's degree in Information Systems and I'm certified in mobile development by Rocketseat.",
+        "about6": "Furthermore, I participated in several Rockeseat Ominstack and Next Level Weeks. I have a certificate in Logic programming and",
+        "about7": "Java training at Caelum and I'm starting to do Alura, starting with the React Native Testing course.",
+        "about8": "I'm always studying, I have team spirit, good communication, resilience and organization."
+    }
+}
