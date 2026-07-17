@@ -461,8 +461,6 @@ Error generating stack: `+o.message+`
     border-radius: 20px;
     border: 2px solid black;
 
-
-    margin-bottom: 30px;
     padding: 15px 2px;
 
     /* background-color: #44475a; */
@@ -699,6 +697,8 @@ Error generating stack: `+o.message+`
     width: 50%;
     decoration: none;
     list-style-type: none;
+
+    margin-bottom: 30px;
 
     @media (max-width: 768px) {
         width: 100%;
