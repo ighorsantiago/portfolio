@@ -71,7 +71,7 @@ export function Header() {
 
                         <NavbarLink to="/portfolio/">HOME</NavbarLink>
                         <NavbarLink to="/portfolio/sobre">{t("about")}</NavbarLink>
-                        <NavbarLink to="/portfolio/projetos">APPS</NavbarLink>
+                        <NavbarLink to="/portfolio/projetos">{t("projectsNav")}</NavbarLink>
                         <NavbarLink to="/portfolio/contatos">{t("contacts")}</NavbarLink>
 
                         <OpenLinksButton
@@ -89,7 +89,7 @@ export function Header() {
                 <NavbarExtendedContainer>
                     <NavbarLinkExtended to="/portfolio/" onClick={() => { setNavbar(false) }}>HOME</NavbarLinkExtended>
                     <NavbarLinkExtended to="/portfolio/sobre" onClick={() => { setNavbar(false) }}>{t("about")}</NavbarLinkExtended>
-                    <NavbarLinkExtended to="/portfolio/projetos" onClick={() => { setNavbar(false) }}>APPS</NavbarLinkExtended>
+                    <NavbarLinkExtended to="/portfolio/projetos" onClick={() => { setNavbar(false) }}>{t("projectsNav")}</NavbarLinkExtended>
                     <NavbarLinkExtended to="/portfolio/contatos" onClick={() => { setNavbar(false) }}>{t("contacts")}</NavbarLinkExtended>
                 </NavbarExtendedContainer>
             )}

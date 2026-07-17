@@ -1,9 +1,22 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import { ProjectStatus } from "../../utils/projects";
+
 type Props = {
     active: boolean;
 }
+
+type StatusProps = {
+    status: ProjectStatus;
+}
+
+const statusColors: Record<ProjectStatus, string> = {
+    live: '#1f9d55',
+    testing: '#d97706',
+    development: '#2563eb',
+    github: '#6b7280',
+};
 
 export const Container = styled.div`
     width: 90%;
@@ -65,6 +78,30 @@ export const AppImage = styled.img`
     border-radius: 20px;
 `;
 
+export const PlainImage = styled.img`
+    width: 240px;
+    height: 156px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+`;
+
+export const StatusBadge = styled.span<StatusProps>`
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    padding: 4px 10px;
+    border-radius: 999px;
+
+    margin-bottom: 10px;
+
+    color: #fff;
+    background-color: ${(props) => statusColors[props.status]};
+`;
+
 export const Title = styled.text`
     font-size: 16px;
     font-weight: bold;
@@ -103,12 +140,42 @@ export const Text = styled.text`
     }
 `;
 
+export const TechList = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+
+    margin-top: 10px;
+`;
+
+export const TechTag = styled.span`
+    font-size: 10px;
+
+    padding: 2px 8px;
+    border-radius: 6px;
+    border: 1px solid #000;
+
+    color: #000;
+`;
+
+export const LinksBox = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+
+    margin-top: 20px;
+`;
+
 export const GithubLink = styled(Link)`
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
     font-size: 14px;
     text-align: justify;
     text-decoration: underline;
-
-    margin-top: 30px;
 
     cursor: pointer;
 
@@ -117,8 +184,6 @@ export const GithubLink = styled(Link)`
     @media (max-width: 768px) {
         font-size: 14px;
         text-align: left;
-
-        margin-top: 0;
     }
 `;
 

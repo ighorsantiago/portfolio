@@ -67,6 +67,46 @@ export const Text = styled.text`
     }
 `;
 
+export const LearningBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 30px;
+
+    @media (max-width: 640px) {
+        margin-top: 20px;
+    }
+`;
+
+export const LearningTitle = styled.text`
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+    color: #000;
+`;
+
+export const ChipList = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+
+    max-width: 400px;
+`;
+
+export const Chip = styled.span`
+    font-size: 12px;
+
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid #000;
+
+    color: #000;
+`;
+
 export const Button = styled.button`
     width: 140px;
     height: 30px;

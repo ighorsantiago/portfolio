@@ -3,23 +3,82 @@
         "portfolioHeader": "PORTFOLIO",
         "about": "ABOUT",
         "contacts": "CONTACTS",
+        "projectsNav": "Projects",
 
         "portfolio": "Portfolio",
-        "dev": "Mobile developer",
+        "dev": "Mobile & AI Developer",
 
-        "petControl": "This will be my first app to be published. The application is in the final stages of development.",
-        "dailyDiet": "Application to help you with your diet. With this app you can have a control of what you ate and if it were on or off the diet.",
-        "goFinances": "Application to help you with finances. You enter the informations and the app shows you everything in a simple and objective way.",
-        "devRadar": "This app helps you find other developers near you by filtering for the programming language you need.",
-        "beTheHero": "An application aimed at NGOs that help homeless animals. The NGOs enter the information through a website and in the application you can see the cases and get in touch with the NGOs if you want to help.",
-        "eColeta": "This application marks the collection points for discarding some materials, such as batteries, oils, etc.",
-        "sudoku": "A little Sudoku game I made to practice.",
-        "igniteTeams": "In this application you can enter your classes and separate them by games and etc.",
-        "todo": "Simple To-Do list app. You enter what you want to do and you can mark what has already been done.",
-        "proffy": "Application to make easier the meeting between students and teachers.",
-
-        "repo": "Seen on Github",
+        "repo": "See on Github",
+        "live": "See live",
         "development": "Under development...",
+
+        "projects": {
+            "filter": {
+                "all": "All",
+                "mobile": "Mobile",
+                "web": "Web",
+                "ai": "AI & Automation",
+                "games": "Games"
+            },
+            "status": {
+                "live": "Live",
+                "testing": "Testing",
+                "development": "In development",
+                "github": "GitHub"
+            },
+            "links": {
+                "live": "See live",
+                "github": "View repository"
+            },
+            "items": {
+                "fluentia": {
+                    "description": "AI language tutor with persistent memory and real tool use via Anthropic API. Learn languages through adaptive exercises, flashcards, dialogue simulations, and personalized error analysis."
+                },
+                "n8n-instagram": {
+                    "description": "Automated content pipeline for 2 Instagram accounts. Claude Sonnet picks the topic and writes the copy, Pexels provides photos, Cloudinary builds the carousel. Human approval via Telegram before publishing."
+                },
+                "prospectai": {
+                    "description": "Commercial prospecting tool combining Google Places with Claude to analyze leads and generate personalized outreach scripts per business type."
+                },
+                "mentoria": {
+                    "description": "AI-powered educational tutor for K-12 students. Explains subjects and generates flashcards by topic via Anthropic API."
+                },
+                "pet-control": {
+                    "description": "Pet health management app: vaccines, medications, appointments, hygiene, weight, and feeding. Available on the Play Store in open testing."
+                },
+                "go-finances": {
+                    "description": "Personal finance app with Google and Apple authentication (OAuth), spending breakdown by category, and income/expense totals."
+                },
+                "daily-diet": {
+                    "description": "Diet tracking app with meal logging by time, on/off diet classification, and cloud persistence via Firebase Firestore."
+                },
+                "ploter": {
+                    "description": "Modular website blueprints for small businesses with booking flow, admin dashboard, and PIX payment module. Live case: Ploter.com — print shop with SEO and Google Search Console configured."
+                },
+                "portfolio": {
+                    "description": "This portfolio — bilingual (PT/EN) with real-time language switching, React Router, Radix UI, and continuous deployment on Vercel."
+                },
+                "tic-tac-toe": {
+                    "description": "Mobile tic-tac-toe game built with React Native and TypeScript. Game logic, win detection, and responsive UI built from scratch. Designed for Play Store publishing with Google Ads."
+                },
+                "block-blast": {
+                    "description": "Mobile block puzzle game with fitting mechanics and score system. Built with React Native. Designed for Play Store publishing with Google Ads."
+                },
+                "sudoku-arena": {
+                    "description": "Mobile Sudoku with board generation, move validation, and difficulty system. Built with React Native. Designed for Play Store publishing with Google Ads."
+                }
+            }
+        },
+
+        "home": {
+            "learning": "What I'm learning",
+            "learningItems": [
+                "Postgrad in AI and Automation",
+                "LLM Agents",
+                "n8n",
+                "Spanish"
+            ]
+        },
 
         "about1": "Hi, my name is Ighor Santiago and I'm a mobile developer",
         "about2": "I started developing with Java but adopted the React Native framework with TypeScript since the beginning of 2020.",

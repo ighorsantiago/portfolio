@@ -1,84 +1,157 @@
 import goFinances from '../assets/go-finances.png';
 import dailyDiet from '../assets/daily-diet.jpeg';
-import devRadar from '../assets/dev-radar.jpeg';
-import beTheHero from '../assets/be-the-hero.jpeg';
-import eColeta from '../assets/ecoleta.jpeg';
 import sudoku from '../assets/sudoku.jpeg';
-import igniteTeams from '../assets/ignite-teams.jpeg';
-import todo from '../assets/todo.jpeg';
-import proffy from '../assets/proffy.jpeg';
 import petControl from '../assets/pet-control.jpeg';
+import icons from '../assets/icons-img.png';
+import aiPlaceholder from '../assets/ai-placeholder.svg';
+import webPlaceholder from '../assets/web-placeholder.svg';
+import gamesPlaceholder from '../assets/games-placeholder.svg';
 
-export const projects = [
+export type ProjectCategory = 'ai' | 'mobile' | 'web' | 'games';
+export type ProjectStatus = 'live' | 'testing' | 'development' | 'github';
+
+export type ProjectLinks = {
+    live?: string;
+    github?: string;
+};
+
+export type Project = {
+    id: string;
+    image: string;
+    title: string;
+    description: string;
+    category: ProjectCategory;
+    status: ProjectStatus;
+    tech: string[];
+    links: ProjectLinks;
+};
+
+export const projects: Project[] = [
+    // IA & Automação
     {
+        id: 'fluentia',
+        image: aiPlaceholder,
+        title: 'FluentIA',
+        description: 'projects.items.fluentia.description',
+        category: 'ai',
+        status: 'development',
+        tech: ['React 19', 'TypeScript', 'Firebase', 'Anthropic API', 'Vercel'],
+        links: { github: 'https://github.com/ighorsantiago/fluentia-ai-language-tutor' },
+    },
+    {
+        id: 'n8n-instagram',
+        image: aiPlaceholder,
+        title: 'n8n Instagram AI Agent',
+        description: 'projects.items.n8n-instagram.description',
+        category: 'ai',
+        status: 'live',
+        tech: ['n8n', 'Anthropic API', 'Pexels', 'Cloudinary', 'Telegram', 'Instagram Graph API', 'Docker', 'Oracle Cloud'],
+        links: { github: 'https://github.com/ighorsantiago/n8n-instagram-ai-agent' },
+    },
+    {
+        id: 'prospectai',
+        image: aiPlaceholder,
+        title: 'ProspectAI',
+        description: 'projects.items.prospectai.description',
+        category: 'ai',
+        status: 'live',
+        tech: ['React', 'TypeScript', 'Vite', 'Vercel Functions', 'Anthropic API', 'Google Places API'],
+        links: { github: 'https://github.com/ighorsantiago/prospectai' },
+    },
+    {
+        id: 'mentoria',
+        image: aiPlaceholder,
+        title: 'MentorIA',
+        description: 'projects.items.mentoria.description',
+        category: 'ai',
+        status: 'live',
+        tech: ['React 19', 'TypeScript', 'Firebase', 'Anthropic API', 'Vercel'],
+        links: { live: 'https://mentoria-flame.vercel.app', github: 'https://github.com/ighorsantiago/mentoria' },
+    },
+
+    // Mobile
+    {
+        id: 'pet-control',
         image: petControl,
-        title: 'Pet Control',
-        //description: 'Esse será meu primeiro app publicado nas lojas. O aplicativo está em fase final de desenvolvimento e em breve será publicado.',
-        description: 'petControl',
-        github: 'Em construção...'
+        title: 'PetControl',
+        description: 'projects.items.pet-control.description',
+        category: 'mobile',
+        status: 'testing',
+        tech: ['React Native', 'TypeScript', 'Expo', 'Expo Router', 'Firebase', 'i18next'],
+        links: { github: 'https://github.com/ighorsantiago/petcontrol' },
     },
     {
-        image: dailyDiet,
-        title: 'Daily Diet',
-        //description: 'Aplicativo para te ajudar na sua dieta. Com ele você pode ter um controle do que comeu e se estava dentro ou fora da dieta.',
-        description: 'dailyDiet',
-        github: 'https://github.com/ighorsantiago/dailydiet-firebase'
-    },
-    {
+        id: 'go-finances',
         image: goFinances,
         title: 'GoFinances',
-        //description: 'Aplicativo para te ajudar nas finanças. Você as informações e o app te mostra tudo de uma forma simples e objetiva.',
-        description: 'goFinances',
-        github: 'https://github.com/ighorsantiago/gofinances'
+        description: 'projects.items.go-finances.description',
+        category: 'mobile',
+        status: 'github',
+        tech: ['React Native', 'TypeScript', 'Expo', 'OAuth', 'AsyncStorage', 'Victory Native'],
+        links: { github: 'https://github.com/ighorsantiago/gofinances' },
     },
     {
-        image: devRadar,
-        title: 'Dev Radar',
-        //description: 'Esse app te ajuda a encontrar outros desenvolvedores perto de voê filtrando pela linguagem de programação que você precisa.',
-        description: 'devRadar',
-        github: 'https://github.com/ighorsantiago/devradar'
+        id: 'daily-diet',
+        image: dailyDiet,
+        title: 'Daily Diet',
+        description: 'projects.items.daily-diet.description',
+        category: 'mobile',
+        status: 'github',
+        tech: ['React Native', 'TypeScript', 'Expo', 'Firebase', 'Styled Components'],
+        links: { github: 'https://github.com/ighorsantiago/dailydiet-firebase' },
+    },
 
+    // Web
+    {
+        id: 'ploter',
+        image: webPlaceholder,
+        title: 'Fábrica de Sites — Ploter.com',
+        description: 'projects.items.ploter.description',
+        category: 'web',
+        status: 'live',
+        tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Vercel'],
+        links: { live: 'https://ploter.com', github: 'https://github.com/ighorsantiago/ploter-site' },
     },
     {
-        image: beTheHero,
-        title: 'Be The Hero',
-        //description: 'Um aplicativo voltado para ONGs que ajudam animais sem lar. As ONGs inserem as informações através de um site e no aplicativo você consegue ver os casos e entrar em contato com as ONGs caso queira ajudar.',
-        description: 'beTheHero',
-        github: 'https://github.com/ighorsantiago/be-the-hero-v2'
+        id: 'portfolio',
+        image: icons,
+        title: 'Portfólio',
+        description: 'projects.items.portfolio.description',
+        category: 'web',
+        status: 'live',
+        tech: ['React 19', 'TypeScript', 'Vite', 'Styled Components', 'i18next'],
+        links: { live: 'https://ighorsantiago.github.io/portfolio', github: 'https://github.com/ighorsantiago/portfolio' },
+    },
+
+    // Jogos
+    {
+        id: 'tic-tac-toe',
+        image: gamesPlaceholder,
+        title: 'Arena Games — Tic-Tac-Toe',
+        description: 'projects.items.tic-tac-toe.description',
+        category: 'games',
+        status: 'github',
+        tech: ['React Native', 'TypeScript', 'Expo'],
+        links: { github: 'https://github.com/ighorsantiago/ticTacToeAI' },
     },
     {
-        image: eColeta,
-        title: 'E-Coleta',
-        //description: 'Esse aplicativo marca os pontos de coleta para descartes de alguns materiais, como pilhas, óleos e etc.',
-        description: 'eColeta',
-        github: 'https://github.com/ighorsantiago/ecoleta'
+        id: 'block-blast',
+        image: gamesPlaceholder,
+        title: 'Arena Games — Block Blast',
+        description: 'projects.items.block-blast.description',
+        category: 'games',
+        status: 'github',
+        tech: ['React Native', 'TypeScript', 'Expo'],
+        links: { github: 'https://github.com/ighorsantiago/block-blast-arena' },
     },
     {
+        id: 'sudoku-arena',
         image: sudoku,
-        title: 'Sudoku',
-        //description: 'Um joguinho de Sudoku que eu fiz para treinar.',
-        description: 'sudoku',
-        github: 'https://github.com/ighorsantiago/sudoku'
-    },
-    {
-        image: igniteTeams,
-        title: 'Ignite Teams',
-        //description: 'Nesse aplicativo você pode inserir suas turmas e separá-las por jogos e etc.',
-        description: 'igniteTeams',
-        github: 'https://github.com/ighorsantiago/ignite-teams'
-    },
-    {
-        image: todo,
-        title: 'To-Do',
-        //description: 'App simples de To-Do list. Você insere o que quer fazer e pode marcar o que já foi feito.',
-        description: 'todo',
-        github: 'https://github.com/ighorsantiago/ignite-todo'
-    },
-    {
-        image: proffy,
-        title: 'Proffy',
-        //description: 'Aplicativo para facilitar o encontro entre alunos e professores.',
-        description: 'proffy',
-        github: 'https://github.com/ighorsantiago/proffy'
+        title: 'Arena Games — Sudoku',
+        description: 'projects.items.sudoku-arena.description',
+        category: 'games',
+        status: 'github',
+        tech: ['React Native', 'TypeScript', 'Expo'],
+        links: { github: 'https://github.com/ighorsantiago/sudokuArena' },
     },
 ];

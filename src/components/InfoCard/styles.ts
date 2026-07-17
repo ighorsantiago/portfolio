@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { EnvelopeSimple } from "@phosphor-icons/react";
 
 export const Container = styled.div`
     width: 400px;
@@ -23,6 +24,20 @@ export const IconImg = styled.img`
     height: 100px;
 
     margin: 20px;
+
+    @media (max-width: 768px) {
+        width: 70px;
+        height: 70px;
+    }
+`;
+
+export const EmailIcon = styled(EnvelopeSimple)`
+    width: 100px;
+    height: 100px;
+
+    margin: 20px;
+
+    color: #000;
 
     @media (max-width: 768px) {
         width: 70px;

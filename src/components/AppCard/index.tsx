@@ -1,5 +1,4 @@
 import { ArrowUpRight } from '@phosphor-icons/react';
-import * as Dialog from '@radix-ui/react-dialog';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -7,60 +6,72 @@ import {
     ImageBox,
     IphoneImage,
     AppImage,
+    PlainImage,
     Description,
+    StatusBadge,
     Title,
     Text,
+    TechList,
+    TechTag,
+    LinksBox,
     GithubLink,
-    InfoButton,
 } from "./styles";
-
 
 import iPhone from '../../assets/iPhone.jpeg';
 
-type InfoProps = {
-    image: string;
-    title: string;
-    description: string;
-    github: string;
-    onClick: () => void;
+import { Project } from '../../utils/projects';
+
+type AppCardProps = {
+    project: Project;
 }
 
-export function AppCard({ image, title, description, github, onClick }: InfoProps) {
+export function AppCard({ project }: AppCardProps) {
 
     const { t } = useTranslation();
 
-    return (
+    const { image, title, description, category, status, tech, links } = project;
 
+    return (
         <Container>
             <ImageBox>
-                <IphoneImage src={iPhone} />
-                <AppImage src={image} />
+                {
+                    category === 'mobile' ? (
+                        <>
+                            <IphoneImage src={iPhone} />
+                            <AppImage src={image} />
+                        </>
+                    ) : (
+                        <PlainImage src={image} />
+                    )
+                }
             </ImageBox>
 
             <Description>
+                <StatusBadge status={status}>{t(`projects.status.${status}`)}</StatusBadge>
+
                 <Title>{title}</Title>
-                <Text> {t(description)} </Text>
-                {/* <InfoButton to={`/portfolio/projetos/${title}`}> */}
+                <Text>{t(description)}</Text>
 
-                {/* <Dialog.Root>
-                    <Dialog.Trigger asChild>
-                        <InfoButton onClick={onClick}>
-                            Saiba mais <ArrowUpRight size={15} />
-                        </InfoButton>
-                    </Dialog.Trigger>
+                <TechList>
+                    {tech.map(item => (
+                        <TechTag key={item}>{item}</TechTag>
+                    ))}
+                </TechList>
 
-                    <ProjectInfo />
-                </Dialog.Root> */}
-
-                {
-                    title !== "Pet Control" &&
-                    <GithubLink
-                        to={github.startsWith('https') ? github : 'https://www.google.com.br'}
-                        target="blank"
-                    >
-                        {title === 'Pet Control' ? t("development") : t("repo")}
-                    </GithubLink>
-                }
+                <LinksBox>
+                    {
+                        links.live &&
+                        <GithubLink to={links.live} target="blank">
+                            {t('projects.links.live')} <ArrowUpRight size={14} />
+                        </GithubLink>
+                    }
+                    {
+                        links.github &&
+                        <GithubLink to={links.github} target="blank">
+                            {t('projects.links.github')} <ArrowUpRight size={14} />
+                        </GithubLink>
+                    }
+                </LinksBox>
             </Description>
         </Container>
     );

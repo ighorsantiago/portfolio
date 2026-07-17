@@ -3,23 +3,82 @@
         "portfolioHeader": "PORTFÓLIO",
         "about": "SOBRE",
         "contacts": "CONTATOS",
+        "projectsNav": "Projetos",
 
         "portfolio": "Portfólio",
-        "dev": "Desenvolvedor mobile",
-
-        "petControl": "Esse será meu primeiro app publicado nas lojas. O aplicativo está em fase final de desenvolvimento e em breve será publicado.",
-        "dailyDiet": "Aplicativo para te ajudar na sua dieta. Com ele você pode ter um controle do que comeu e se estava dentro ou fora da dieta.",
-        "goFinances": "Aplicativo para te ajudar nas finanças. Você insere as informações e o app te mostra tudo de uma forma simples e objetiva.",
-        "devRadar": "Esse app te ajuda a encontrar outros desenvolvedores perto de voê filtrando pela linguagem de programação que você precisa.",
-        "beTheHero": "Um aplicativo voltado para ONGs que ajudam animais sem lar. As ONGs inserem as informações através de um site e no aplicativo você consegue ver os casos e entrar em contato com as ONGs caso queira ajudar.",
-        "eColeta": "Esse aplicativo marca os pontos de coleta para descartes de alguns materiais, como pilhas, óleos e etc.",
-        "sudoku": "Um joguinho de Sudoku que eu fiz para treinar.",
-        "igniteTeams": "Nesse aplicativo você pode inserir suas turmas e separá-las por jogos e etc.",
-        "todo": "App simples de To-Do list. Você insere o que quer fazer e pode marcar o que já foi feito.",
-        "proffy": "Aplicativo para facilitar o encontro entre alunos e professores.",
+        "dev": "Desenvolvedor Mobile & IA",
 
         "repo": "Ver no Github",
+        "live": "Ver ao vivo",
         "development": "Em desenvolvimento...",
+
+        "projects": {
+            "filter": {
+                "all": "Todos",
+                "mobile": "Mobile",
+                "web": "Web",
+                "ai": "IA & Automação",
+                "games": "Jogos"
+            },
+            "status": {
+                "live": "Em produção",
+                "testing": "Em teste",
+                "development": "Em desenvolvimento",
+                "github": "GitHub"
+            },
+            "links": {
+                "live": "Ver ao vivo",
+                "github": "Ver repositório"
+            },
+            "items": {
+                "fluentia": {
+                    "description": "Tutor inteligente de idiomas com memória persistente e tool use real via Anthropic API. Aprenda idiomas com exercícios adaptativos, flashcards, simulações de diálogo e análise personalizada de erros."
+                },
+                "n8n-instagram": {
+                    "description": "Pipeline automatizado de conteúdo para 2 contas do Instagram. Claude Sonnet escolhe o tema e escreve o texto, Pexels fornece as fotos, Cloudinary monta o carrossel. Aprovação humana via Telegram antes da publicação."
+                },
+                "prospectai": {
+                    "description": "Ferramenta de prospecção comercial que combina Google Places com Claude para analisar leads e gerar scripts de abordagem personalizados por tipo de negócio."
+                },
+                "mentoria": {
+                    "description": "Tutor educacional com IA para estudantes do Ensino Fundamental e Médio. Explica matérias e gera flashcards por tópico via Anthropic API."
+                },
+                "pet-control": {
+                    "description": "App de gestão de saúde de pets: vacinas, medicamentos, consultas, higiene, peso e alimentação. Disponível na Play Store em fase de testes abertos."
+                },
+                "go-finances": {
+                    "description": "App de controle financeiro com autenticação via Google e Apple (OAuth), gráfico de gastos por categoria e totalizadores de entrada e saída."
+                },
+                "daily-diet": {
+                    "description": "App de controle de dieta com registro de refeições por horário, classificação dentro/fora da dieta e persistência em nuvem via Firebase Firestore."
+                },
+                "ploter": {
+                    "description": "Blueprints modulares de sites para pequenos negócios com agendamento, dashboard admin e módulo PIX. Case publicado: Ploter.com — gráfica no ar com SEO e Google Search Console configurados."
+                },
+                "portfolio": {
+                    "description": "Este portfólio — bilíngue (PT/EN) com troca de idioma em tempo real, React Router, Radix UI e deploy contínuo no Vercel."
+                },
+                "tic-tac-toe": {
+                    "description": "Jogo da velha mobile desenvolvido com React Native e TypeScript. Lógica de jogo, detecção de vitória e interface responsiva desenvolvidos do zero. Projetado para publicação na Play Store com Google Ads."
+                },
+                "block-blast": {
+                    "description": "Jogo de blocos mobile com mecânica de encaixe e sistema de pontuação. Desenvolvido com React Native. Projetado para publicação na Play Store com Google Ads."
+                },
+                "sudoku-arena": {
+                    "description": "Sudoku mobile com geração de tabuleiros, validação de jogadas e sistema de dificuldade. Desenvolvido com React Native. Projetado para publicação na Play Store com Google Ads."
+                }
+            }
+        },
+
+        "home": {
+            "learning": "O que estou aprendendo",
+            "learningItems": [
+                "Pós-graduação em IA e Automação",
+                "Agentes com LLMs",
+                "n8n",
+                "Espanhol"
+            ]
+        },
 
         "about1": "Prazer, me chamo Ighor Santiago e sou um desenvolvedor mobile",
         "about2": "Comecei no desenvolvimento com Java mas adotei o framework React Native com TypeScript desde o início de 2020.",

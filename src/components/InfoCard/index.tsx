@@ -1,13 +1,13 @@
 import {
     Container,
     IconImg,
+    EmailIcon,
     LinkBtn
 } from './styles';
 
 import whatsappIcon from '../../assets/whatsapp-icon.svg';
 import linkedinIcon from '../../assets/linkedin-icon.svg';
 import githubIcon from '../../assets/github-icon.svg';
-import emailIcon from '../../assets/email-icon.svg';
 
 export function InfoCard() {
 
@@ -29,7 +29,7 @@ export function InfoCard() {
                 <IconImg src={githubIcon} />
             </LinkBtn>
             <LinkBtn to="mailto:ighor_santiago@hotmail.com">
-                <IconImg src={emailIcon} />
+                <EmailIcon weight="regular" />
             </LinkBtn>
         </Container>
     );
