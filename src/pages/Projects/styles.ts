@@ -96,8 +96,8 @@ export const Table = styled.ul`
     flex-wrap: wrap;
 
     justify-content: center;
-    align-items: center;
-    
+    align-items: stretch;
+
     /* background-color: #44475a; */
 
     @media (max-width: 768px) {
@@ -110,8 +110,6 @@ export const Line = styled.li`
     width: 50%;
     decoration: none;
     list-style-type: none;
-
-    align-self: center;
 
     @media (max-width: 768px) {
         width: 100%;

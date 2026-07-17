@@ -20,6 +20,8 @@ const statusColors: Record<ProjectStatus, string> = {
 
 export const Container = styled.div`
     width: 90%;
+    height: 100%;
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: row;
@@ -36,7 +38,7 @@ export const Container = styled.div`
 
     @media (max-width: 768px) {
         width: 90%;
-        /* height: 60%; */
+        height: auto;
 
         flex-direction: column;
 

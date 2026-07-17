@@ -34,7 +34,7 @@ export function Header() {
     const { t, i18n } = useTranslation();
 
     const [navbar, setNavbar] = useState(false);
-    const [lng, setLng] = useState("pt");
+    const [lng, setLng] = useState("en");
 
     function handleCheck() {
         if(lng === "pt") {
