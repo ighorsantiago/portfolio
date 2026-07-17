@@ -30,8 +30,6 @@ export const Container = styled.div`
     border-radius: 20px;
     border: 2px solid black;
 
-
-    margin-bottom: 30px;
     padding: 15px 2px;
 
     /* background-color: #44475a; */

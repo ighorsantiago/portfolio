@@ -111,6 +111,8 @@ export const Line = styled.li`
     decoration: none;
     list-style-type: none;
 
+    margin-bottom: 30px;
+
     @media (max-width: 768px) {
         width: 100%;
 
