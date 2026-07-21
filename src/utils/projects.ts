@@ -1,14 +1,15 @@
 import goFinances from '../assets/go-finances.png';
 import dailyDiet from '../assets/daily-diet.jpeg';
-import sudoku from '../assets/sudoku.jpeg';
 import petControl from '../assets/pet-control-mockup.jpeg';
 import icons from '../assets/icons-img.png';
-import gamesPlaceholder from '../assets/games-placeholder.svg';
 import fluentiaScreenshot from '../assets/fluentia-screenshot.jpeg';
 import n8nInstagramScreenshot from '../assets/n8n-instagram-screenshot.jpeg';
 import prospectaiScreenshot from '../assets/prospectai-screenshot.jpeg';
 import mentoriaScreenshot from '../assets/mentoria-screenshot.jpeg';
 import ploterScreenshot from '../assets/ploter-screenshot.jpeg';
+import ticTacToeScreenshot from '../assets/tic-tac-toe-screenshot.jpeg';
+import blockBlastScreenshot from '../assets/block-blast-screenshot.jpeg';
+import sudokuArenaScreenshot from '../assets/sudoku-arena-screenshot.jpeg';
 
 export type ProjectCategory = 'ai' | 'mobile' | 'web' | 'games';
 export type ProjectStatus = 'live' | 'testing' | 'development' | 'github';
@@ -129,7 +130,7 @@ export const projects: Project[] = [
     // Jogos
     {
         id: 'tic-tac-toe',
-        image: gamesPlaceholder,
+        image: ticTacToeScreenshot,
         title: 'Arena Games — Tic-Tac-Toe',
         description: 'projects.items.tic-tac-toe.description',
         category: 'games',
@@ -139,7 +140,7 @@ export const projects: Project[] = [
     },
     {
         id: 'block-blast',
-        image: gamesPlaceholder,
+        image: blockBlastScreenshot,
         title: 'Arena Games — Block Blast',
         description: 'projects.items.block-blast.description',
         category: 'games',
@@ -149,7 +150,7 @@ export const projects: Project[] = [
     },
     {
         id: 'sudoku-arena',
-        image: sudoku,
+        image: sudokuArenaScreenshot,
         title: 'Arena Games — Sudoku',
         description: 'projects.items.sudoku-arena.description',
         category: 'games',
