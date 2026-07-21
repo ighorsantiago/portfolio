@@ -3,9 +3,12 @@ import dailyDiet from '../assets/daily-diet.jpeg';
 import sudoku from '../assets/sudoku.jpeg';
 import petControl from '../assets/pet-control.jpeg';
 import icons from '../assets/icons-img.png';
-import aiPlaceholder from '../assets/ai-placeholder.svg';
-import webPlaceholder from '../assets/web-placeholder.svg';
 import gamesPlaceholder from '../assets/games-placeholder.svg';
+import fluentiaScreenshot from '../assets/fluentia-screenshot.jpeg';
+import n8nInstagramScreenshot from '../assets/n8n-instagram-screenshot.jpeg';
+import prospectaiScreenshot from '../assets/prospectai-screenshot.jpeg';
+import mentoriaScreenshot from '../assets/mentoria-screenshot.jpeg';
+import ploterScreenshot from '../assets/ploter-screenshot.jpeg';
 
 export type ProjectCategory = 'ai' | 'mobile' | 'web' | 'games';
 export type ProjectStatus = 'live' | 'testing' | 'development' | 'github';
@@ -30,7 +33,7 @@ export const projects: Project[] = [
     // IA & Automação
     {
         id: 'fluentia',
-        image: aiPlaceholder,
+        image: fluentiaScreenshot,
         title: 'FluentIA',
         description: 'projects.items.fluentia.description',
         category: 'ai',
@@ -40,7 +43,7 @@ export const projects: Project[] = [
     },
     {
         id: 'n8n-instagram',
-        image: aiPlaceholder,
+        image: n8nInstagramScreenshot,
         title: 'n8n Instagram AI Agent',
         description: 'projects.items.n8n-instagram.description',
         category: 'ai',
@@ -50,7 +53,7 @@ export const projects: Project[] = [
     },
     {
         id: 'prospectai',
-        image: aiPlaceholder,
+        image: prospectaiScreenshot,
         title: 'ProspectAI',
         description: 'projects.items.prospectai.description',
         category: 'ai',
@@ -60,7 +63,7 @@ export const projects: Project[] = [
     },
     {
         id: 'mentoria',
-        image: aiPlaceholder,
+        image: mentoriaScreenshot,
         title: 'MentorIA',
         description: 'projects.items.mentoria.description',
         category: 'ai',
@@ -104,7 +107,7 @@ export const projects: Project[] = [
     // Web
     {
         id: 'ploter',
-        image: webPlaceholder,
+        image: ploterScreenshot,
         title: 'Fábrica de Sites — Ploter.com',
         description: 'projects.items.ploter.description',
         category: 'web',

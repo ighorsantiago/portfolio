@@ -79,12 +79,14 @@ export const AppImage = styled.img`
 `;
 
 export const PlainImage = styled.img`
-    width: 240px;
-    height: 156px;
+    width: 200px;
+    height: 325px;
 
     object-fit: cover;
+    object-position: top;
 
-    border-radius: 16px;
+    border-radius: 20px;
+    border: 2px solid black;
 `;
 
 export const StatusBadge = styled.span<StatusProps>`
