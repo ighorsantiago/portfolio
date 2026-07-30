@@ -124,7 +124,7 @@ export const projects: Project[] = [
         category: 'web',
         status: 'live',
         tech: ['React 19', 'TypeScript', 'Vite', 'Styled Components', 'i18next'],
-        links: { live: 'https://ighorsantiago.github.io/portfolio', github: 'https://github.com/ighorsantiago/portfolio' },
+        links: { live: 'https://portfolio-nu-blue-56.vercel.app', github: 'https://github.com/ighorsantiago/portfolio' },
     },
 
     // Jogos
