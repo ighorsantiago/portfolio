@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    height: calc(100vh - 4.5rem);
+    min-height: 100vh;
+
+    padding-top: 80px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* background-color: green; */
 
     @media (max-width: 640px) {
         flex-direction: column;
@@ -18,8 +18,6 @@ export const Container = styled.div`
 export const Content = styled.div`
     width: 50%;
     height: 50%;
-
-    /* background-color: red; */
 
     @media (max-width: 640px) {
         width: 50%;
@@ -36,8 +34,6 @@ export const TextBox = styled.div`
     justify-content: center;
     align-items: center;
 
-    /* background-color: red; */
-
     @media (max-width: 640px) {
         justify-content: center;
     }
@@ -50,7 +46,7 @@ export const Title = styled.text`
 
     margin-bottom: 30px;
 
-    color: #000;
+    color: var(--color-text);
 
     @media (max-width: 640px) {
         min-width: 360px;
@@ -60,7 +56,7 @@ export const Title = styled.text`
 
 export const Text = styled.text`
     font-size: 16px;
-    color: #000;
+    color: var(--color-text-secondary);
 
     @media (max-width: 640px) {
         margin: 20px 0;
@@ -85,7 +81,7 @@ export const LearningTitle = styled.text`
 
     margin-bottom: 12px;
 
-    color: #000;
+    color: var(--color-text);
 `;
 
 export const ChipList = styled.div`
@@ -102,89 +98,53 @@ export const Chip = styled.span`
 
     padding: 4px 12px;
     border-radius: 999px;
-    border: 1px solid #000;
+    border: 1px solid var(--color-badge-border);
+    background-color: var(--color-badge-bg);
 
-    color: #000;
+    color: var(--color-badge-text);
 `;
 
 export const Button = styled.button`
     width: 140px;
     height: 30px;
 
-    border: 1px solid #000;
+    border: 1px solid var(--color-border);
 
     padding: 5px 0;
 
-    color: #000;
+    color: var(--color-text);
     background-color: transparent;
 `;
 
-export const ImageBox = styled.div`
+export const BadgesBox = styled.div`
     width: 50%;
-    height: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    /* background-color: red; */
-
     @media (max-width: 640px) {
-        width: 150px;
-        height: 150px;
+        width: 90%;
         margin-top: 50px;
-        margin-bottom: 100px;
     }
 `;
 
-export const Image = styled.img`
-    width: 400px;
-    height: 400px;
+export const BadgeList = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 
-    @media (max-width: 640px) {
-        width: 150px;
-        height: 150px;
-    }
+    max-width: 380px;
 `;
 
-// export const Container = styled.div`
-//     width: 90%;
-//     height: calc(100vh - 6rem);
+export const TechBadge = styled.span`
+    font-size: 13px;
 
-//     display: flex;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-badge-border);
+    background-color: var(--color-badge-bg);
 
-//     justify-content: center;
-//     align-items: center;
-
-//     @media (max-width: 768px) {
-//         padding: 20px 0;
-//     }
-// `;
-
-
-// export const Content = styled.div`
-//     /* width: 100%;
-//     height: calc(100vh - 8rem); */
-    
-//     width: 80%;
-    
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-    
-//     border-radius: 20px;
-
-//     padding: 15px;
-    
-//     background-color: #44475a;
-
-//     @media (max-width: 768px) {
-//         width: 100%;
-
-//         margin-top: 20%;
-//     }
-// `;
-
-// export const Text = styled.text`
-//     font-size: 20px;
-// `;
+    color: var(--color-badge-text);
+`;

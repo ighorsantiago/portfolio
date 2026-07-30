@@ -9,7 +9,7 @@ export function About() {
     const { t } = useTranslation();
 
     return (
-        <Container>
+        <Container id="about">
             <Content>
 
                 <Image src={Ighor} />

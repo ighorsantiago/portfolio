@@ -39,13 +39,14 @@ export const Content = styled.div`
 export const Image = styled.img`
     width: 300px;
     height: 300px;
+    border-radius: 20px;
 
     margin: 50px 0;
 `;
 
 export const Text = styled.text`
     font-size: 18px;
-    color: #000;
+    color: var(--color-text-secondary);
 
     @media (max-width: 768px) {
         font-size: 16px

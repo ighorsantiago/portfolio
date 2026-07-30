@@ -61,13 +61,13 @@ export function AppCard({ project }: AppCardProps) {
                 <LinksBox>
                     {
                         links.live &&
-                        <GithubLink to={links.live} target="blank">
+                        <GithubLink href={links.live} target="_blank" rel="noreferrer">
                             {t('projects.links.live')} <ArrowUpRight size={14} />
                         </GithubLink>
                     }
                     {
                         links.github &&
-                        <GithubLink to={links.github} target="blank">
+                        <GithubLink href={links.github} target="_blank" rel="noreferrer">
                             {t('projects.links.github')} <ArrowUpRight size={14} />
                         </GithubLink>
                     }

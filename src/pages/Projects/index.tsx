@@ -21,7 +21,7 @@ export function Projects() {
         : projects.filter(project => project.category === filter);
 
     return (
-        <Container>
+        <Container id="projects">
             <Title>{t('projectsNav')}</Title>
 
             <FilterBar>

@@ -13,22 +13,24 @@ export function InfoCard() {
 
     return (
         <Container>
-            <LinkBtn to="whatsapp://send?text=Oi Ighor, tudo bem?&phone=+5521964777735">
+            <LinkBtn href="whatsapp://send?text=Oi Ighor, tudo bem?&phone=+5521964777735">
                 <IconImg src={whatsappIcon} />
             </LinkBtn>
             <LinkBtn
-                to="https://www.linkedin.com/in/ighor-santiago/"
-                target="blank"
+                href="https://www.linkedin.com/in/ighor-santiago/"
+                target="_blank"
+                rel="noreferrer"
             >
                 <IconImg src={linkedinIcon} />
             </LinkBtn>
             <LinkBtn
-                to="https://github.com/ighorsantiago"
-                target="blank"
+                href="https://github.com/ighorsantiago"
+                target="_blank"
+                rel="noreferrer"
             >
                 <IconImg src={githubIcon} />
             </LinkBtn>
-            <LinkBtn to="mailto:ighor_santiago@hotmail.com">
+            <LinkBtn href="mailto:ighor_santiago@hotmail.com">
                 <EmailIcon weight="regular" />
             </LinkBtn>
         </Container>

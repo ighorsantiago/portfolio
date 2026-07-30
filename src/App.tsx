@@ -1,14 +1,22 @@
-import { BrowserRouter } from 'react-router-dom';
-
 import './global.css';
 
-import { Router } from './Router';
+import { Header } from './components/Header';
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { Projects } from './pages/Projects';
+import { Contacts } from './pages/Contacts';
 
 export function App() {
 
   return (
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <>
+      <Header />
+      <main>
+        <Home />
+        <About />
+        <Projects />
+        <Contacts />
+      </main>
+    </>
   )
 }

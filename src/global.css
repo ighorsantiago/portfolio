@@ -1,14 +1,35 @@
+:root {
+    --color-bg: #0a0a0a;
+    --color-bg-card: #141414;
+    --color-border: #2a2a2a;
+    --color-text: #f0f0f0;
+    --color-text-secondary: #888888;
+    --color-badge-bg: #1e1e1e;
+    --color-badge-border: #333333;
+    --color-badge-text: #cccccc;
+    --color-link: #60a5fa;
+    --status-live: #22c55e;
+    --status-testing: #f59e0b;
+    --status-development: #3b82f6;
+    --status-github: #6b7280;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
-    background-color: #fff;
-    color: #fff
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 body, input, text, textarea, button {
-    font-family: 'Fira Code';
+    font-family: 'Fira Code', monospace;
 }

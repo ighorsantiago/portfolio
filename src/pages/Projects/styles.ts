@@ -33,7 +33,7 @@ export const Title = styled.h1`
 
     margin-bottom: 30px;
 
-    color: #000;
+    color: var(--color-text);
 
     @media (max-width: 768px) {
         font-size: 26px;
@@ -61,12 +61,12 @@ export const FilterButton = styled.button<FilterButtonProps>`
 
     padding: 8px 16px;
     border-radius: 999px;
-    border: 2px solid #000;
+    border: 1px solid ${(props) => (props.active ? 'var(--color-text)' : 'var(--color-border)')};
 
     cursor: pointer;
 
-    color: ${(props) => (props.active ? '#fff' : '#000')};
-    background-color: ${(props) => (props.active ? '#000' : 'transparent')};
+    color: ${(props) => (props.active ? '#0a0a0a' : 'var(--color-text)')};
+    background-color: ${(props) => (props.active ? 'var(--color-text)' : 'transparent')};
 
     transition: background-color 0.15s, color 0.15s;
 

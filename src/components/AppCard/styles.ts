@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 import { ProjectStatus } from "../../utils/projects";
 
@@ -12,10 +11,10 @@ type StatusProps = {
 }
 
 const statusColors: Record<ProjectStatus, string> = {
-    live: '#1f9d55',
-    testing: '#d97706',
-    development: '#2563eb',
-    github: '#6b7280',
+    live: 'var(--status-live)',
+    testing: 'var(--status-testing)',
+    development: 'var(--status-development)',
+    github: 'var(--status-github)',
 };
 
 export const Container = styled.div`
@@ -28,11 +27,10 @@ export const Container = styled.div`
     align-items: center;
 
     border-radius: 20px;
-    border: 2px solid black;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-card);
 
     padding: 15px 2px;
-
-    /* background-color: #44475a; */
 
     @media (max-width: 768px) {
         width: 90%;
@@ -86,7 +84,7 @@ export const PlainImage = styled.img`
     object-position: top;
 
     border-radius: 20px;
-    border: 2px solid black;
+    border: 1px solid var(--color-border);
 `;
 
 export const StatusBadge = styled.span<StatusProps>`
@@ -100,7 +98,7 @@ export const StatusBadge = styled.span<StatusProps>`
 
     margin-bottom: 10px;
 
-    color: #fff;
+    color: #0a0a0a;
     background-color: ${(props) => statusColors[props.status]};
 `;
 
@@ -109,7 +107,7 @@ export const Title = styled.text`
     font-weight: bold;
 
     margin-bottom: 10px;
-    color: #000;
+    color: var(--color-text);
 `;
 
 export const Description = styled.div`
@@ -130,14 +128,13 @@ export const Description = styled.div`
 
 export const Text = styled.text`
     font-size: 12px;
-    text-align: justify;
+    text-align: left;
 
     margin: 20px 0;
 
-    color: #000;
+    color: var(--color-text-secondary);
 
     @media (max-width: 768px) {
-        /* text-align: left; */
         margin: 10px 0;
     }
 `;
@@ -156,9 +153,10 @@ export const TechTag = styled.span`
 
     padding: 2px 8px;
     border-radius: 6px;
-    border: 1px solid #000;
+    border: 1px solid var(--color-badge-border);
+    background-color: var(--color-badge-bg);
 
-    color: #000;
+    color: var(--color-badge-text);
 `;
 
 export const LinksBox = styled.div`
@@ -170,18 +168,17 @@ export const LinksBox = styled.div`
     margin-top: 20px;
 `;
 
-export const GithubLink = styled(Link)`
+export const GithubLink = styled.a`
     display: inline-flex;
     align-items: center;
     gap: 4px;
 
     font-size: 14px;
-    text-align: justify;
     text-decoration: underline;
 
     cursor: pointer;
 
-    color: blue;
+    color: var(--color-link);
 
     @media (max-width: 768px) {
         font-size: 14px;
@@ -189,14 +186,13 @@ export const GithubLink = styled(Link)`
     }
 `;
 
-// export const InfoButton = styled(Link)`
 export const InfoButton = styled.button`
     font-size: 12px;
     text-decoration: underline;
     border-width: 0;
     margin: 30px 0;
     cursor: pointer;
-    color: blue;
+    color: var(--color-link);
     background-color: transparent;
 
     @media (max-width: 768px) {

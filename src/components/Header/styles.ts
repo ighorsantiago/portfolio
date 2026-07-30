@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link, NavLink } from "react-router-dom";
 import * as  Switch from '@radix-ui/react-switch';
 
 type Props = {
@@ -13,17 +12,18 @@ type SwitchProps = {
 export const NavbarContainer = styled.nav<Props>`
     width: 100%;
     height: ${(props) => (props.navBar ? "100vh" : "80px")};
-    
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 5%;
-
-    opacity: ${(props) => (props.navBar ? 0.9 : 1)};
-
-    background-color: ${(props) => (props.navBar ? 'white' : 'black')};
+    background-color: ${(props) => (props.navBar ? 'var(--color-bg)' : '#000')};
 
     @media (min-width: 700px) {
         height: 80px;
@@ -32,11 +32,13 @@ export const NavbarContainer = styled.nav<Props>`
     }
 `;
 
-export const LeftContainer = styled.div`
+export const LeftContainer = styled.a`
     flex: 70%;
     display: flex;
     align-items: center;
     padding-left: 5%;
+
+    text-decoration: none;
 `;
 
 export const SwitchContainer = styled.div`
@@ -62,7 +64,6 @@ export const SwitchText = styled.text`
     color: white;
 `;
 
-// export const SwitchRoot = styled(Switch.Root)<SwitchProps>`
 export const SwitchRoot = styled(Switch.Root)`
     width: 42px;
     height: 25px;
@@ -90,16 +91,15 @@ export const SwitchRoot = styled(Switch.Root)`
 export const SwitchThumb = styled(Switch.Thumb)<SwitchProps>`
     width: 21px;
     height: 21px;
-    
+
     display: block;
     align-self: center;
-    
+
     border-radius: 9999px;
 
     transition: transform 100ms;
     transform: translateX(${(props) => (props.language === "en" ? 19 : 2)}px);
-    // transform: translateX(19px);
-    
+
     will-change: transform;
     box-shadow: 0 2px 2px black;
     background-color: white;
@@ -112,7 +112,6 @@ export const SwitchThumb = styled(Switch.Thumb)<SwitchProps>`
     }
 `;
 
-/* ${(props) => (props.checked ? translateX(19) : translateX(2))}px; */
 export const RightContainer = styled.div`
     flex: 30%;
     display: flex;
@@ -131,7 +130,7 @@ export const NavbarLinkContainer = styled.div`
     display: flex;
 `;
 
-export const NavbarLink = styled(Link)`
+export const NavbarLink = styled.a`
     color: white;
     font-size: large;
     text-decoration: none;
@@ -149,9 +148,9 @@ export const Logo = styled.img`
     height: auto;
 `;
 
-export const Text = styled.text<Props>`
+export const Text = styled.text`
     font-size: 1.2rem;
-    color: ${(props) => (props.navBar ? 'black' : 'white')};
+    color: white;
 `;
 
 export const OpenLinksButton = styled.button<Props>`
@@ -159,9 +158,9 @@ export const OpenLinksButton = styled.button<Props>`
     height: 50px;
     background: none;
     border: none;
-    color: ${(props) => (props.navBar ? 'black' : 'white')};
+    color: white;
     font-size: 45px;
-    
+
     cursor: pointer;
 
     @media (min-width: 700px) {
@@ -179,12 +178,12 @@ export const NavbarExtendedContainer = styled.div`
     }
 `;
 
-export const NavbarLinkExtended = styled(NavLink)`
+export const NavbarLinkExtended = styled.a`
     font-size: x-large;
-    
+
     text-decoration: none;
-    
+
     margin: 10px;
-    
-    color: black;
+
+    color: var(--color-text);
 `;

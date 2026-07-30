@@ -21,7 +21,6 @@ import {
 } from "./styles";
 
 import LogoWhite from "../../assets/react.svg";
-import LogoBlack from "../../assets/react-black.svg";
 import Brasil from "../../assets/brasil.svg";
 import USA from "../../assets/usa.svg";
 
@@ -44,16 +43,14 @@ export function Header() {
             setLng("pt");
             i18n.changeLanguage("pt")
         }
-
-        console.log(lng);
     }
 
     return (
         <NavbarContainer navBar={navbar}>
             <NavbarInnerContainer>
-                <LeftContainer>
-                    <Logo src={navbar ? LogoBlack : LogoWhite} />
-                    <Text navBar={navbar}>{t("portfolioHeader")}</Text>
+                <LeftContainer href="#home">
+                    <Logo src={LogoWhite} />
+                    <Text>{t("portfolioHeader")}</Text>
                 </LeftContainer>
 
                 <SwitchContainer onClick={handleCheck}>
@@ -69,10 +66,10 @@ export function Header() {
                 <RightContainer>
                     <NavbarLinkContainer>
 
-                        <NavbarLink to="/portfolio/">HOME</NavbarLink>
-                        <NavbarLink to="/portfolio/sobre">{t("about")}</NavbarLink>
-                        <NavbarLink to="/portfolio/projetos">{t("projectsNav")}</NavbarLink>
-                        <NavbarLink to="/portfolio/contatos">{t("contacts")}</NavbarLink>
+                        <NavbarLink href="#home">HOME</NavbarLink>
+                        <NavbarLink href="#about">{t("about")}</NavbarLink>
+                        <NavbarLink href="#projects">{t("projectsNav")}</NavbarLink>
+                        <NavbarLink href="#contacts">{t("contacts")}</NavbarLink>
 
                         <OpenLinksButton
                             navBar={navbar}
@@ -87,10 +84,10 @@ export function Header() {
             </NavbarInnerContainer>
             {navbar && (
                 <NavbarExtendedContainer>
-                    <NavbarLinkExtended to="/portfolio/" onClick={() => { setNavbar(false) }}>HOME</NavbarLinkExtended>
-                    <NavbarLinkExtended to="/portfolio/sobre" onClick={() => { setNavbar(false) }}>{t("about")}</NavbarLinkExtended>
-                    <NavbarLinkExtended to="/portfolio/projetos" onClick={() => { setNavbar(false) }}>{t("projectsNav")}</NavbarLinkExtended>
-                    <NavbarLinkExtended to="/portfolio/contatos" onClick={() => { setNavbar(false) }}>{t("contacts")}</NavbarLinkExtended>
+                    <NavbarLinkExtended href="#home" onClick={() => { setNavbar(false) }}>HOME</NavbarLinkExtended>
+                    <NavbarLinkExtended href="#about" onClick={() => { setNavbar(false) }}>{t("about")}</NavbarLinkExtended>
+                    <NavbarLinkExtended href="#projects" onClick={() => { setNavbar(false) }}>{t("projectsNav")}</NavbarLinkExtended>
+                    <NavbarLinkExtended href="#contacts" onClick={() => { setNavbar(false) }}>{t("contacts")}</NavbarLinkExtended>
                 </NavbarExtendedContainer>
             )}
         </NavbarContainer>

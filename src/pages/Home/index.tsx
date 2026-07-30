@@ -5,18 +5,31 @@ import {
     Content,
     Title,
     Text,
-    ImageBox,
-    Image,
     TextBox,
     Button,
     LearningBox,
     LearningTitle,
     ChipList,
     Chip,
+    BadgesBox,
+    BadgeList,
+    TechBadge,
 } from './styles';
 
-import reactLogo from "../../assets/react-logo.jpeg";
-import icons from "../../assets/icons-img.png";
+const techStack = [
+    'React Native',
+    'TypeScript',
+    'n8n',
+    'Anthropic API',
+    'Firebase',
+    'Expo',
+    'Docker',
+    'Vercel',
+    'React',
+    'Tailwind CSS',
+    'Oracle Cloud',
+    'Git',
+];
 
 export function Home() {
 
@@ -25,7 +38,7 @@ export function Home() {
     const learningItems = t("home.learningItems", { returnObjects: true }) as string[];
 
     return (
-        <Container>
+        <Container id="home">
             <Content>
                 <TextBox>
                     <Title>{t("portfolio")} <br/> Ighor Santiago</Title>
@@ -44,10 +57,15 @@ export function Home() {
                     </LearningBox>
                 </TextBox>
             </Content>
-            <ImageBox>
-                <Image src={reactLogo} />
-                <Image src={icons} style={{ position: 'absolute' }} />
-            </ImageBox>
+            <BadgesBox>
+                <BadgeList>
+                    {
+                        techStack.map(item => (
+                            <TechBadge key={item}>{item}</TechBadge>
+                        ))
+                    }
+                </BadgeList>
+            </BadgesBox>
         </Container>
     );
 }

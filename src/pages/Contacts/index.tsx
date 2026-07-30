@@ -4,7 +4,7 @@ import { Container, Content } from './styles';
 export function Contacts() {
 
     return (
-        <Container>
+        <Container id="contacts">
             <InfoCard />
         </Container>
     );
