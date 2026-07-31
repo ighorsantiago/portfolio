@@ -94,7 +94,11 @@ export const ChipList = styled.div`
 `;
 
 export const Chip = styled.span`
+    width: fit-content;
+    max-width: 100%;
+
     font-size: 12px;
+    text-align: center;
 
     padding: 6px 12px;
     border-radius: 16px;
