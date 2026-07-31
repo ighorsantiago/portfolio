@@ -2,21 +2,22 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    height: calc(100vh - 6rem);
+    min-height: 100vh;
 
     display: flex;
 
     justify-content: center;
     align-items: center;
 
+    padding: 120px 0 60px;
+
     @media (max-width: 768px) {
-        margin-top: 100px;
+        padding: 100px 0 60px;
     }
 `;
 
 export const Content = styled.div`
     width: 60%;
-    height: 80%;
 
     display: flex;
     flex-direction: column;
@@ -24,13 +25,10 @@ export const Content = styled.div`
     justify-content: center;
     align-items: center;
 
-    margin-top: 120px;
-
     text-align: justify;
 
     @media (max-width: 768px) {
         width: 90%;
-        margin-top: 300px;
 
         text-align: left;
     }
