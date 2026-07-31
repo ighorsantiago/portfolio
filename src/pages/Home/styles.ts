@@ -96,8 +96,8 @@ export const ChipList = styled.div`
 export const Chip = styled.span`
     font-size: 12px;
 
-    padding: 4px 12px;
-    border-radius: 999px;
+    padding: 6px 12px;
+    border-radius: 16px;
     border: 1px solid var(--color-badge-border);
     background-color: var(--color-badge-bg);
 
