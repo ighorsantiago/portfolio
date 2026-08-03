@@ -80,13 +80,8 @@
             ]
         },
 
-        "about1": "Hi, my name is Ighor Santiago and I'm a mobile developer",
-        "about2": "I started developing with Java but adopted the React Native framework with TypeScript since the beginning of 2020.",
-        "about3": "Since the beginning of college I've been working with systems analysis, first at IBM and currently at Global Hitss.",
-        "about4": "I've been developing some apps in the courses I take and I have two apps that I want to publish in stores. ",
-        "about5": "I have a bachelor's degree in Information Systems and I'm certified in mobile development by Rocketseat.",
-        "about6": "Furthermore, I participated in several Rockeseat Ominstack and Next Level Weeks. I have a certificate in Logic programming and",
-        "about7": "Java training at Caelum and I'm starting to do Alura, starting with the React Native Testing course.",
-        "about8": "I'm always studying, I have team spirit, good communication, resilience and organization."
+        "about1": "Mobile developer focused on React Native and TypeScript, with hands-on experience building published apps and AI-powered automation projects. Bachelor's degree in Information Systems and currently pursuing a postgraduate degree in AI and Automation. Certified in mobile development by Rocketseat (Ignite).",
+        "about2": "I have experience with workflow automation using n8n, LLM integration via Anthropic API (tool use + RAG), and self-hosted infrastructure (Docker, Oracle Cloud, nginx).",
+        "about3": "Open to remote opportunities in development, AI, and automation, with a focus on international roles."
     }
 }
